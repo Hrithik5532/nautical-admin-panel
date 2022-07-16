@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-nautical</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     -->
+
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            width: 100;
+        }
+        .nav-btn {
+            margin: 10px;
+        }
+        
+        .navbar {
+            left: 0px !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        /* 
+        .logodiv{
+            width: 100px;
+            height: 75px;
+        }
+        ul{
+           display: flex; 
+           flex-direction: row;
+           justify-content: space-around;
+        }
+        li{
+           list-style: none;
+        } */
+        
+        .logo {
+            position: relative;
+            left: 320px;
+            top: 7px;
+        }
+        
+        .navbar {
+            width: 1519px;
+            position: relative;
+            left: 260px;
+            border: 1px solid white;
+            box-shadow: 1px 0px 0px 0px rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+        }
+        
+        #head {
+            height: 140px;
+            /* width: 1024px; */
+        }
+        
+        .sitename {
+            position: relative;
+            left: 350px;
+            top: 33px;
+            font-family: "Times New Roman", Times, serif;
+            color: #2e9895;
+            font-size: 30px;
+        }
+        
+        #nav {
+            position: relative;
+            top: 60px;
+            right: 300px;
+            list-style: none;
+        }
+        
+        #nav li {
+            display: inline;
+        }
+        
+        #nav li a {
+            padding: 7px 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #D4A017;
+            text-decoration: none;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            -webkit-transition: all 1s;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            -webkit-transition: all 1s;
+        }
+        
+        #nav li a:hover {
+            color: #2e9895;
+            text-decoration: underline;
+        }
+        
+        #select {
+            color: #2e9895;
+            text-decoration: underline;
+        }
+        
+        #overMe {
+            position: relative;
+        }
+        
+        #subnav {
+            display: none;
+            position: absolute;
+            left: 365px;
+            top: 28px;
+            width: 280px;
+        }
+        
+        #subnav a {
+            float: left;
+            width: 130px;
+            padding: 3px;
+            text-align: center;
+            background: url(../images/layout/navbg.png) repeat;
+        }
+        /*Chanegs made by ashwin*/
+        /*Form and Input CSS*/
+        
+        .input-padding {
+            padding: 10px;
+        }
+        
+        .form-heading {
+            margin: 10px 0 20px 10px;
+        }
+        .input-box{
+            border-radius: 30px !important;
+            border:1px solid rgb(169, 168, 168);
+            padding:5px 10px 5px 10px;
+            background:rgba(246, 246, 246, 0.516);
+            /**-webkit-box-shadow: 10px 15px 42px -22px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 15px 42px -22px rgba(0,0,0,0.75);
+            box-shadow: 8px 12px 30px -23px rgba(0,0,0,0.75);**/
+        
+        }
+        .table-input1{
+            border: 0px solid white;
+            
+        }
+        .table-input1:focus{
+            border: 0;
+            
+        }
+        label{
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- <div class="container d-flex justify-content-center mt-20">
+        <div class="col-xl-6 col-lg-12  col-12 mb-5"> 
+            -- col-md-12 col-sm-12 --
+            <div class="tab-vertical">
+                <ul class="nav nav-tabs" id="myTab3" role="tablist">
+                    <li class="nav-item"> <a class="nav-link active" id="home-vertical-tab" data-toggle="tab" href="#home-vertical" role="tab" aria-controls="home" aria-selected="true">Tab Vertical #1</a> </li>
+                    <li class="nav-item"> <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">Tab Vertical #2</a> </li>
+                    <li class="nav-item"> <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">Tab Vertical #3</a> </li>
+                </ul>
+                <div class="tab-content" id="myTabContent3">
+                    <div class="tab-pane fade show active" id="home-vertical" role="tabpanel" aria-labelledby="home-vertical-tab">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id cursus metus aliquam eleifend mi in. At consectetur lorem donec massa. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Molestie nunc non blandit massa enim nec dui nunc mattis. Cursus mattis molestie a iaculis at erat pellentesque adipiscing. Augue eget arcu dictum varius duis.</p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-vertical" role="tabpanel" aria-labelledby="profile-vertical-tab">
+                        <h3>Tab Content 1</h3>
+                        <p>Integer malesuada nunc vel risus commodo. Enim eu turpis egestas pretium aenean pharetra magna. Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat. Diam vulputate ut pharetra sit amet. At ultrices mi tempus imperdiet.</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact-vertical" role="tabpanel" aria-labelledby="contact-vertical-tab">
+                        <h3>Tab Heading</h3>
+                        <p>Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras pulvinar mattis. Amet risus nullam eget felis eget nunc lobortis mattis. Lacus viverra vitae congue eu. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Est placerat in egestas erat imperdiet sed euismod.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- new -->
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" style="text-align: center;">
+        {{message}}
+
+    </div>
+    {% endfor %}
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-90 ">
+            <div class="    ">
+
+                <div class="w-100 d-flex   justify-content-center">
+                    <a class="navbar-brand me-2 align-items-center" href="#!">
+                        <img src="https://nauticalglobal.com/images/layout/logo.jpg" height="100" alt="Logo" loading="lazy" style="margin-top: -1px;" />
+                        <h4 class="nav-head">Nautical Marine Management<br/> Services Pvt. Ltd.</h4>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <div class="w-100 d-flex">
+                    <div class="collapse navbar-collapse justify-content-center align-items-center" id="navbarButtonsExample">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/index.html">Home</a></li>
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/aboutus.html">About Us</a></li>
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/ourservices.html">Our Services</a></li>
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/quality&safety.html">Quality & Safety</a></li>
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/ourteam.html" id="overMe">Our Team</a> </li>
+                            <li class="nav-btn"><a class="navigation-link" href="https://nauticalglobal.com/contact.html">Contact</a></li>
+                            {% if user.is_authenticated %}
+                            <li class="btn btn-link nav-btn" style="padding: 10px;">
+                                <a class="navigation-link" href="{% url 'admin_form'%}">Admin Panel</a>
+                            </li>
+                            <li class="btn btn-link nav-btn" style="padding: 10px;">
+                                <a class="navigation-link" href="{% url 'logout'%}">Log Out</a>
+                            </li>
+                            
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="site-section ">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-lg-8  wow fadeInRight single-content">
+                    <h1 class="oleez-page-title wow fadeInUp  pr-2 index-text" id="login-title">Login</h1>
+                    <form method="POST" enctype="multipart/form-data" class="oleez-login-form" style="font-size:large ;">
+                        {% csrf_token%}
+    
+                        <div class="form-group">
+                            <a style="font-size: large;">Username</a>{{form.username}}
+                        </div>
+                        <div class="form-group">
+                            <a style="font-size: large;">Password</a>{{form.password}}
+                        </div>
+                      
+                        <style>
+                            @media (min-width:992px) {
+                                .oleez-login-form .form-group,
+                                #login-title {
+                                    margin-left: 320px !important;
+                                }
+                            }
+    
+                            .oleez-login-form .form-group a:hover {
+                                color: rgb(211, 13, 13) !important;
+                            }
+    
+                            .oleez-page-title #login-title {
+                                margin-bottom: 43px;
+                            }
+    
+                            .oleez-login-form .form-group input+a {
+                                position: absolute;
+                                margin-bottom: 0;
+                                transition: all 0.3s ease;
+                            }
+    
+                            .oleez-login-form .form-group input:focus {
+                                outline: none;
+                            }
+    
+                            .oleez-login-form .form-group input {
+                                width: 100%;
+                            }
+    
+                            .form-group input {
+                                border: 0;
+                                border-bottom: 2px solid #000000;
+                                padding: 9px 0;
+                                font-size: 15px;
+                                font-weight: 700;
+                            }
+    
+                            .oleez-login-form .form-group {
+                                position: relative;
+                                margin-bottom: 30px;
+                            }
+    
+                            .oleez-login-form a {
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin-bottom: 10px;
+                            }
+                        </style>
+    
+    
+                        <div class="form-group">
+                            <button class="btn defaul-btn" > Login</button>
+                        </div>
+    
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-nautical</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet" />
+     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 100;
+        }
+
+        .navbar {
+            left: 0px !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        /*
+        .logodiv{
+            width: 100px;
+            height: 75px;
+        }
+        ul{
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+        }
+        li{
+           list-style: none;
+        } */
+
+        .logo {
+            position: relative;
+            left: 320px;
+            top: 7px;
+        }
+
+        .navbar {
+            width: 1519px;
+            position: relative;
+            left: 260px;
+            border: 1px solid white;
+            box-shadow: 1px 0px 0px 0px rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+        }
+
+        #head {
+            height: 140px;
+            /* width: 1024px; */
+        }
+
+        .sitename {
+            position: relative;
+            left: 350px;
+            top: 33px;
+            font-family: "Times New Roman", Times, serif;
+            color: #2e9895;
+            font-size: 30px;
+        }
+
+        #nav {
+            position: relative;
+            top: 60px;
+            right: 300px;
+            list-style: none;
+        }
+
+        #nav li {
+            display: inline;
+        }
+
+        #nav li a {
+            padding: 7px 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #D4A017;
+            text-decoration: none;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            -webkit-transition: all 1s;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -o-transition: all 1s;
+            -webkit-transition: all 1s;
+        }
+
+        #nav li a:hover {
+            color: #2e9895;
+            text-decoration: underline;
+        }
+
+        #select {
+            color: #2e9895;
+            text-decoration: underline;
+        }
+
+        #overMe {
+            position: relative;
+        }
+
+        #subnav {
+            display: none;
+            position: absolute;
+            left: 365px;
+            top: 28px;
+            width: 280px;
+        }
+
+        #subnav a {
+            float: left;
+            width: 130px;
+            padding: 3px;
+            text-align: center;
+            background: url(../images/layout/navbg.png) repeat;
+        }
+        /*Chanegs made by ashwin*/
+        /*Form and Input CSS*/
+
+        .input-padding {
+            padding: 10px;
+        }
+
+        .form-heading {
+            margin: 10px 0 20px 10px;
+        }
+        .input-box{
+            border-radius: 30px !important;
+            border:1px solid rgb(169, 168, 168);
+            padding:5px 10px 5px 10px;
+            background:rgba(246, 246, 246, 0.516);
+            /**-webkit-box-shadow: 10px 15px 42px -22px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 15px 42px -22px rgba(0,0,0,0.75);
+            box-shadow: 8px 12px 30px -23px rgba(0,0,0,0.75);**/
+
+        }
+        .table-input1{
+            border: 0px solid white;
+            text-align:center !important;
+
+        }
+        .table-input1:focus{
+            border: 0;
+
+        }
+        label{
+            padding-left: 10px;
+        }
+        /**table{
+            border:0px;
+            border-radius:10px;
+            text-align:center !important;
+            box-shadow:0 5px 20px rgba(0,0,0,0.19);
+        }
+        thead{
+            border-top-left-radius: 10px;
+            border:1px solid black;
+        }**/
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- <div class="container d-flex justify-content-center mt-20">
+        <div class="col-xl-6 col-lg-12  col-12 mb-5">
+            -- col-md-12 col-sm-12 --
+            <div class="tab-vertical">
+                <ul class="nav nav-tabs" id="myTab3" role="tablist">
+                    <li class="nav-item"> <a class="nav-link active" id="home-vertical-tab" data-toggle="tab" href="#home-vertical" role="tab" aria-controls="home" aria-selected="true">Tab Vertical #1</a> </li>
+                    <li class="nav-item"> <a class="nav-link" id="profile-vertical-tab" data-toggle="tab" href="#profile-vertical" role="tab" aria-controls="profile" aria-selected="false">Tab Vertical #2</a> </li>
+                    <li class="nav-item"> <a class="nav-link" id="contact-vertical-tab" data-toggle="tab" href="#contact-vertical" role="tab" aria-controls="contact" aria-selected="false">Tab Vertical #3</a> </li>
+                </ul>
+                <div class="tab-content" id="myTabContent3">
+                    <div class="tab-pane fade show active" id="home-vertical" role="tabpanel" aria-labelledby="home-vertical-tab">
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc id cursus metus aliquam eleifend mi in. At consectetur lorem donec massa. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Molestie nunc non blandit massa enim nec dui nunc mattis. Cursus mattis molestie a iaculis at erat pellentesque adipiscing. Augue eget arcu dictum varius duis.</p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-vertical" role="tabpanel" aria-labelledby="profile-vertical-tab">
+                        <h3>Tab Content 1</h3>
+                        <p>Integer malesuada nunc vel risus commodo. Enim eu turpis egestas pretium aenean pharetra magna. Feugiat in fermentum posuere urna nec tincidunt praesent semper feugiat. Diam vulputate ut pharetra sit amet. At ultrices mi tempus imperdiet.</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact-vertical" role="tabpanel" aria-labelledby="contact-vertical-tab">
+                        <h3>Tab Heading</h3>
+                        <p>Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras pulvinar mattis. Amet risus nullam eget felis eget nunc lobortis mattis. Lacus viverra vitae congue eu. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Est placerat in egestas erat imperdiet sed euismod.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- new -->
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" style="text-align: center;">
+        {{message}}
+
+    </div>
+    {% endfor %}
+
+    <nav id="head" class="navbar mt-1 w-100">
+        <div class="d-flex justify-content-evenly">
+            <div class="logo">
+                <img src="https://nauticalglobal.com/images/layout/logo.jpg" width="100px" alt="">
+            </div>
+            <h1 class="sitename">Nautical Marine Management Services Pvt. Ltd.</h1>
+            <div class="justify-content-end" style="  right: 0;padding:15px;position: absolute;">
+                {% if user.is_authenticated %}
+                <button class="btn btn-primary">
+                    <a href="{% url 'admin_form'%}" style="color:white;">Admin panel</a>
+                </button>
+                <button class="btn btn-primary">
+                    <a href="{% url 'logout'%}" style="color:white;">Log Out</a>
+                </button>
+                {% else %}
+                <button class="btn btn-primary">
+                    <a href="{% url 'login'%}" style="color:white;">Login</a>
+                </button>
+                {% endif %}
+
+            </div>
+        </div>
+        <ul id="nav" class=" d-flex  justify-content-evenly">
+            <li><a href="https://nauticalglobal.com/index.html">HOME</a></li>
+            <li><a href="https://nauticalglobal.com/aboutus.html">ABOUT US</a></li>
+            <li><a href="https://nauticalglobal.com/ourservices.html">OUR SERVICES</a></li>
+            <li><a href="https://nauticalglobal.com/quality&safety.html">QUALITY &amp; SAFETY</a></li>
+            <li><a href="https://nauticalglobal.com/ourteam.html" id="overMe">OUR TEAM</a>
+
+            </li>
+            <li><a href="https://nauticalglobal.com/contact.html">CONTACT</a></li>
+            <li><a href="new (1).html" id="select">FORM</a></li>
+        </ul>
+    </nav>
+
+    <!-- <ul id="subnav" style="display: block;">
+          <li><a href="organisation-chart.html">Organisation Chart</a></li>
+          <li><a href="ourteam.html">Our Team</a></li>
+      </ul> -->
+    <!--
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+          </div>
+        </div>
+      </nav> -->
+    <div class="col-md-2"></div>
+    <form action="{% url 'form_post'%}" method="POST">
+        {% csrf_token %}
+
+        <div class="d-flex ms-3 py-3  flex-row-reverse">
+          <div class="">
+            <div class="nav flex-column nav-pills m-3 " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true" onclick="topFunction()">Profile Details</button>
+                <button class="nav-link" id="dependents-tab" data-bs-toggle="pill" data-bs-target="#dependents" type="button" role="tab" aria-controls="dependents" aria-selected="false" onclick="topFunction()">Next of kin /
+                    Dependents</button>
+                <button class="nav-link" id="passport-tab" data-bs-toggle="pill" data-bs-target="#passport" type="button" role="tab" aria-controls="passport" aria-selected="false" onclick="topFunction()">Passport details</button>
+                <button class="nav-link" id="seamen-tab" data-bs-toggle="pill" data-bs-target="#seamen" type="button" role="tab" aria-controls="seamen" aria-selected="false" onclick="topFunction()">Continuous Discharge Certificate / Seamen
+                    Book</button>
+                <button class="nav-link" id="academic-tab" data-bs-toggle="pill" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="false" onclick="topFunction()">Academic
+                    qualifications</button>
+                <button class="nav-link" id="licence-tab" data-bs-toggle="pill" data-bs-target="#licence" type="button" role="tab" aria-controls="licence" aria-selected="false" onclick="topFunction()">Licene / certificate of competency</button>
+                <button class="nav-link" id="stcw-tab" data-bs-toggle="pill" data-bs-target="#stcw" type="button" role="tab" aria-controls="stcw" aria-selected="false" onclick="topFunction()">STCW and other certificate</button>
+                <button class="nav-link" id="reference-tab" data-bs-toggle="pill" data-bs-target="#reference" type="button" role="tab" aria-controls="reference" aria-selected="false" onclick="topFunction()">References</button>
+                <button class="nav-link" id="how-tab" data-bs-toggle="pill" data-bs-target="#how" type="button" role="tab" aria-controls="how" aria-selected="false" onclick="topFunction()">How did you come to know about us?</button>
+                <button class="nav-link" id="personal-tab" data-bs-toggle="pill" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false" onclick="topFunction()">Personal details</button>
+                <!-- <button class="nav-link" id="last-tab" data-bs-toggle="pill" data-bs-target="#last" type="button" role="tab" aria-controls="last" aria-selected="false">Last Drawn wages</button> -->
+                <button class="nav-link" id="additional-tab" data-bs-toggle="pill" data-bs-target="#additional" type="button" role="tab" aria-controls="additional" aria-selected="false" onclick="topFunction()">Additional
+                    Information</button>
+                <button class="nav-link" id="reason-tab" data-bs-toggle="pill" data-bs-target="#reason" type="button" role="tab" aria-controls="reason" aria-selected="false" onclick="topFunction()">Reason for Application</button>
+                <button class="nav-link" id="sea-tab" data-bs-toggle="pill" data-bs-target="#sea" type="button" role="tab" aria-controls="sea" aria-selected="false" onclick="topFunction()">SEA EXPERIENCE:<small>(Most recent at
+                        Top)Special Experience:</small></button>
+                <button class="nav-link" id="shore-tab" data-bs-toggle="pill" data-bs-target="#shore" type="button" role="tab" aria-controls="shore" aria-selected="false" onclick="topFunction()">On-Shore Service</button>
+                <button class="nav-link" id="declaration-tab" data-bs-toggle="pill" data-bs-target="#declaration" type="button" role="tab" aria-controls="declaration" aria-selected="false" onclick="topFunction()">Declaration</button>
+
+            </div>
+          </div>
+            <div class="tab-content col-10" id="v-pills-tabContent">
+
+                <!-- personal details -->
+                <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <form class="p-4 rounded-3 shadow">
+                        <div class="container rounded-3 shadow">
+
+                            <!-- Application From Heading ||----------------------------------------------------------- -->
+                            <div class="container display form-heading">
+                                <h5 class="mt-3"><br>
+                                    Application Form / Personal Data Update form
+                                </h5>
+                                <hr>
+                            </div>
+                            <!-- Secton 1 : Appliead For Office : 1 || ---------------------------------------------- -->
+                            <div class="">
+                                <div class="display form-heading">
+                                    <h4>APPLIED TO OFFICE IN CITY / COUNTRY:</h4>
+                                </div>
+                                <div class="form-row">
+                                    <div class="container">
+                                        <div class="form-group">
+                                            <div class="row">
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Present Rank</label> {{ATOCForm.rank}}
+                                                </div>
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Rank Applied</label> {{ATOCForm.ms_rank}}
+                                                </div>
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Date Of Application</label> {{ATOCForm.doa}}
+                                                </div>
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Date Of Availability</label> {{ATOCForm.doa2}}
+                                                </div>
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Agency</label> {{ATOCForm.agency}}
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <hr>
+
+                            <div class="display form-heading">
+                                <h4>PROFILE DETAILS</h4>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="container">
+                                    <div class="form-group d-flex">
+                                        <div class="form-group col-md-4  input-padding">
+                                            <label for="inputname">Name</label> {{profileDetailsForm.name}}
+                                        </div>
+
+                                        <div class="form-group col-md-4 input-padding">
+                                            <label for="dob">Date of birth</label> {% comment %} <input type="date" placeholder="" class="form-control" id="dob" required pattern=""> {% endcomment %} {{profileDetailsForm.dob}}
+                                        </div>
+
+                                        <div class="form-group col-md-4 input-padding">
+                                            <label for="pob">Place of Birth</label> {% comment %} <input type="text" class="form-control" id="inputAddress" placeholder=""> {% endcomment %} {{profileDetailsForm.pob}}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group d-flex ">
+                                        <div class="form-group col-md-4 input-padding">
+                                            <label for="national">Nationality</label> {% comment %} <select class="form-control" id="" name="nationality">
+                                                <option value="">select</option>
+                                            </select> {% endcomment %} {{profileDetailsForm.nationality}}
+                                        </div>
+                                        <div class="form-group col-md-4 input-padding">
+                                            <label for="married">Marritial Status</label> {% comment %} <select class="form-control" id="">
+                                                <option value="unmarried"></option>
+                                                <option value="married">Married</option>
+                                                <option value="unmarried">Unmarried</option>
+                                            </select> {% endcomment %} {{profileDetailsForm.marritial_status}}
+                                        </div>
+                                        <div class="form-group col-md-4 input-padding">
+                                            <label for="married">Smoker</label> {% comment %} <select class="form-control" id="">
+                                                <option value=""></option>
+                                                <option value="smoker">Smoker</option>
+                                                <option value="nonsmoker">Non Smoker</option>
+                                            </select> {% endcomment %} {{profileDetailsForm.smoker}}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="container col-6" style="border-right:1px solid #ccc; padding-inline: 30px;">
+                                        <div class="form-group my-4 text-around">
+                                            <div class="form-group col-md-12  input-padding  ">
+                                                <label for="addr1">Permanent Address:</label> {% comment %} <input type="text" class="form-control" id="inputAddress" placeholder=""> {% endcomment %} {{profileDetailsForm.add1}}
+
+                                            </div>
+                                            <div class="form-group d-flex ">
+                                                <div class="form-group col-md-6 input-padding ">
+                                                    <label for="inputCity">City</label> {% comment %} <input type="text" class="form-control" id="inputCity2" placeholder="eg:KOLKATA"> {% endcomment %} {{profileDetailsForm.city}}
+
+                                                </div>
+                                                <div class="form-group col-md-6 input-padding">
+                                                    <label for="inputCity">Pin code</label> {% comment %} <input type="text" class="form-control" id="pincode2" name='zip' placeholder="eg:700081"> {% endcomment %} {{profileDetailsForm.zip}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group d-flex">
+                                            <div class="form-group col-md-6 input-padding ">
+                                                <label for="phone">Telephone</label> {% comment %} <input type="text" class="form-control" id="phone" placeholder=""> {% endcomment %} {{profileDetailsForm.pno}}
+                                            </div>
+                                            <div class="form-group col-md-6  input-padding ">
+                                                <label for="email">Email 1</label> {% comment %} <input type="email" class="form-control" id="email" placeholder="email id"> {% endcomment %} {{profileDetailsForm.email}}
+
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group my-4 text-around">
+                                            <div class="form-group col-12 m-2">
+                                                <label for="airp">Nearest Domestic Airport</label> {% comment %} <input type="text" class="form-control" id="airp" placeholder="Enter details"> {% endcomment %} {{profileDetailsForm.airport}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container col-6 " style="padding-inline: 30px;">
+                                        <div class="form-group my-4 text-around">
+                                            <div class="form-group col-12 m-2">
+                                                <label for="addr1">Present Address:</label> {% comment %} <input type="text" class="form-control" id="inputAddress" placeholder=""> {% endcomment %} {{profileDetailsForm.add1}}
+
+                                            </div>
+                                            <div class="form-group d-flex flex-row">
+                                                <div class="form-group col-6 m-2">
+                                                    <label for="inputCity">City</label> {% comment %} <input type="text" class="form-control" id="inputCity2" placeholder="eg:KOLKATA"> {% endcomment %} {{profileDetailsForm.city}}
+
+                                                </div>
+                                                <div class="form-group col-5 m-2">
+                                                    <label for="inputCity">Pin code</label> {% comment %} <input type="text" class="form-control" id="pincode2" name='zip' placeholder="eg:700081"> {% endcomment %} {{profileDetailsForm.zip}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group my-4 d-flex flex-row">
+                                            <div class="form-group col-6 m-2">
+                                                <label for="phone">Telephone</label> {% comment %} <input type="text" class="form-control" id="phone" placeholder=""> {% endcomment %} {{profileDetailsForm.pno}}
+                                            </div>
+                                            <div class="form-group col-5 m-2">
+                                                <label for="email">Email 1</label> {% comment %} <input type="email" class="form-control" id="email" placeholder="email id"> {% endcomment %} {{profileDetailsForm.email}}
+
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group my-4 text-around">
+                                            <div class="form-group col-12 m-2">
+                                                <label for="airp">Nearest International Airport</label> {% comment %} <input type="text" class="form-control" id="airp" placeholder="Enter details"> {% endcomment %} {{profileDetailsForm.airport2}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <hr>
+
+                            </div>
+                    </form>
+                    <a class="btn btn-primary btnNext my-2"  onclick="topFunction()">Next</a>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+
+                    </div>
+                </div>
+                <!-- personal detai
+                ls -->
+
+                <!-- next of kin -->
+                <div class="tab-pane fade" id="dependents" role="tabpanel" aria-labelledby="dependents-tab">
+                    <div class="container p-4 rounded-3 shadow">
+                        <div class="display form-heading ">
+                            <h4>NEXT OF KIN / DEPENDENTS</h4>
+                        </div>
+                        <div class="form-row">
+                                    <div class="container">
+                                        <div class="form-group">
+                                            <div class="row">
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Name</label> {{forms.Nkd_deForm.name_rela}}
+
+                                                </div>
+                                                
+                                                <div class="form-group col-md-3 input-padding">
+
+                                                    <label for="inputname">Relation</label> {{forms.Nkd_deForm.relation}}
+                                                </div>
+
+                                                <!--<div class="form-group col-md-3 input-padding">-->
+                                                <!--    <label for="inputname">Relation</label> {{forms.Nkd_deForm.ms_rank}}-->
+                                                <!--</div>-->
+
+                                                <div class="form-group col-md-3 input-padding">
+                                                    <label for="inputname">Address</label> {{forms.Nkd_deForm.add_nkd}}
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        <div class="row clearfix">
+                            <div class="col-md-12 column">
+                                <table class="table table-bordered table-hover " id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                Sr.no
+                                            </th>
+                                            <th class="text-center">
+                                                Name
+                                            </th>
+                                            <th class="text-center">
+                                                Relationship
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Birth
+                                            </th>
+                                            <th class="text-center">
+                                                PP No./ Other Id
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='addr0' class="">
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                <input type="text" name='name0' placeholder='Name' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='relation0' placeholder='Relationship' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='dob0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='ppno0' placeholder='PP No.' class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="d-flex justify-content-between">
+                                <a id="add_row" class="btn btn-primary pull-left">Add Row</a>
+                                <a id='delete_row' class="pull-right btn btn-primary">Delete Row</a>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                var i = 1;
+                                $("#add_row").click(function() {
+                                    $('#addr' + i).html("<td>" + (i + 1) +
+                                        "</td><td><input name='name0' type='text'  placeholder='Name' class='form-control'  /> </td><td><input   name='relation0' type='text' placeholder='Relationship'  class='form-control input-md'></td><td><input type='date' name='dob0'  class='form-control'/></td><td><input type='text'  name='ppno0' placeholder='PP No.' class='form-control'/></td>"
+                                    );
+                                    $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+                                    i++;
+                                });
+                                $("#delete_row").click(function() {
+                                    if (i > 1) {
+                                        $("#addr" + (i - 1)).html('');
+                                        i--;
+                                    }
+                                });
+                            });
+                        </script>
+
+                    </div><br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious2 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext2 my-3 "  onclick="topFunction()">Next</a>
+                            <!-- next-prev -->
+                            <script>
+                                $('.btnNext2').click(function() {
+                                    $('.nav-pills > .active').next('button').tab('show');
+                                });
+                                $('.btnPrevious2').click(function() {
+                                    $('.nav-pills > .active').prev('button').tab('show');
+                                });
+                            </script>
+                            <!-- next-prev -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- next of kin -->
+
+                <!-- PASSPORT DETAILS -->
+                <div class="tab-pane fade" id="passport" role="tabpanel" aria-labelledby="passport-tab">
+
+                    <div class="container p-4 rounded-3 shadow">
+                        <div class="display form-heading">
+                            <h4>PASSPORT DETAILS</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+
+                                            </th>
+                                            <th class="text-center">
+                                                Number
+                                            </th>
+                                            <th class="text-center">
+                                                Place of Issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Expiry
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="table-info">
+                                                PASSPORT
+                                            </th>
+                                            <td>
+                                                {{forms.PassportDetailsForm.pass_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.pass_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.pass_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.pass_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="table-info">
+                                                US VISA (C1/D)
+                                            </th>
+                                            <td>
+                                                {{forms.PassportDetailsForm.visa_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.visa_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.visa_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.visa_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="table-info">
+                                                YELLOW FEVER
+                                            </th>
+                                            <td>
+                                                {{forms.PassportDetailsForm.yellow_fever_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.yellow_fever_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.yellow_fever_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.PassportDetailsForm.yellow_fever_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious3 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext3 my-3 "  onclick="topFunction()">Next</a>
+                            <!-- next-prev -->
+                            <script>
+                                $('.btnNext3').click(function() {
+                                    $('.nav-pills > .active').next('button').tab('show');
+                                });
+                                $('.btnPrevious3').click(function() {
+                                    $('.nav-pills > .active').prev('button').tab('show');
+                                });
+                            </script>
+                            <!-- next-prev -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- PASSPORT DETAILS -->
+
+                <!-- CONTINUOUS DISCHARGE CERTIFICATE / SEAMEN BOOK -->
+                <div class="tab-pane fade" id="seamen" role="tabpanel" aria-labelledby="seamen-tab">
+                    <div class="container p-4 rounded-3 shadow">
+                        <div class="display form-heading">
+                            <h4>CONTINUOUS DISCHARGE CERTIFICATE / SEAMEN BOOK</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+
+                                            </th>
+                                            <th class="text-center">
+                                                Number
+                                            </th>
+                                            <th class="text-center">
+                                                Place of Issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Expiry
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th class="table-info">
+                                                INDIAN
+                                            </th>
+                                            <td>
+                                                {{forms.CDCSBForm.ind_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.ind_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.ind_doi}}
+                                            </td>
+                                            <td>
+
+                                                {{forms.CDCSBForm.ind_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="table-info">
+                                                PANAMA
+                                            </th>
+                                            <td>
+                                                {{forms.CDCSBForm.panama_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.panama_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.panama_doi}}
+                                            </td>
+                                            <td>
+
+                                                {{forms.CDCSBForm.panama_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="table-info">
+                                                OTHERS
+                                            </th>
+                                            <td>
+                                                {{forms.CDCSBForm.others_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.others_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.CDCSBForm.others_doi}}
+                                            </td>
+                                            <td>
+
+                                                {{forms.CDCSBForm.others_doe}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div> <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious4 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext4 my-3 "  onclick="topFunction()">Next</a>
+                            <!-- next-prev -->
+                            <script>
+                                $('.btnNext4').click(function() {
+                                    $('.nav-pills > .active').next('button').tab('show');
+                                });
+                                $('.btnPrevious4').click(function() {
+                                    $('.nav-pills > .active').prev('button').tab('show');
+                                });
+                            </script>
+                            <!-- next-prev -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- ACADEMIC QUALIFICATIONS  -->
+                <div class="tab-pane fade" id="academic" role="tabpanel" aria-labelledby="academic-tab">
+                    <div class="container p-4 rounded-3 shadow">
+                        <div class="display form-heading">
+                            <h4>ACADEMIC QUALIFICATIONS</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+
+                                            </th>
+                                            <th class="text-center">
+                                                Name Of Institute/ City
+                                            </th>
+                                            <th class="text-center">
+                                                Grade/Degree
+                                            </th>
+                                            <th class="text-center">
+                                                From (Year)
+                                            </th>
+                                            <th class="text-center">
+                                                To (Year)
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                ELEMENTATY
+                                            </th>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.elem_noi}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.elem_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.elem_from_yr}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.elem_to_yr}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                SECONDARY
+                                            </th>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.secd_noi}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.secd_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.secd_from_yr}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.secd_to_yr}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                UNIVERSITY
+                                            </th>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.univ_noi}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.univ_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.univ_from_yr}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.univ_to_yr}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                PROFESSIONAL QUALIFICATION
+                                            </th>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.profe_noi}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.profe_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.profe_from_yr}}
+                                            </td>
+                                            <td>
+                                                {{forms.AcademicDetailsForm.profe_to_yr}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+
+                                <label for="">Additional Skills</label>{{forms.AcademicDetailsForm.addition_skills}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious5 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext5 my-3 "  onclick="topFunction()">Next</a>
+                            <!-- next-prev -->
+                            <script>
+                                $('.btnNext5').click(function() {
+                                    $('.nav-pills > .active').next('button').tab('show');
+                                });
+                                $('.btnPrevious5').click(function() {
+                                    $('.nav-pills > .active').prev('button').tab('show');
+                                });
+                            </script>
+                            <!-- next-prev -->
+                        </div>
+                    </div>
+                </div>
+                <!-- ACADEMIC QUALIFICATIONS  -->
+
+                <!-- LICENCE / CERTIFICATES OF COMPETENCY -->
+                <div class="tab-pane fade" id="licence" role="tabpanel" aria-labelledby="licence-tab">
+                    <div class="container p-4 rounded-3 shadow">
+                        <div class="display form-heading">
+                            <h4>LICENCE / CERTIFICATES OF COMPETENCY</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                Issuing Authority
+                                            </th>
+                                            <th class="text-center">
+                                                Grade
+                                            </th>
+                                            <th class="text-center">
+                                                Number
+                                            </th>
+                                            <th class="text-center">
+                                                Date of issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Expiry
+                                            </th>
+                                            <th class="text-center">
+                                                Date Revalidation
+                                            </th>
+                                            <th class="text-center">
+                                                STCW 2010
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                INDIAN
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.ind_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.ind_no}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.ind_doi}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.ind_doe}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.ind_dr}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.ind_stcw}} </td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                UK
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.uk_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.uk_no}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.uk_doi}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.uk_doe}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.uk_dr}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.uk_stcw}} </td>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>
+                                                AUS
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.aus_grade}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.aus_no}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.aus_doi}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.aus_doe}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.aus_dr}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.aus_stcw}} </td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                SINGAPORE
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.singa_grade}}
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.singa_no}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.singa_doi}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.singa_doe}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.singa_dr}} </td>
+                                            <td>
+                                                {{forms.LCOCForm.singa_stcw}} </td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                PANAMA
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.panama_grade}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.panama_no}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.panama_doi}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.panama_doe}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.panama_dr}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.panama_stcw}} </td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                OTHERS
+                                            </th>
+                                            <td>
+                                                {{forms.LCOCForm.other_grade}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.other_no}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.other_doi}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.other_doe}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.other_dr}} </td>
+                                            </td>
+                                            <td>
+                                                {{forms.LCOCForm.other_stcw}} </td>
+                                            </td>
+                                        </tr>
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious6 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext6 my-3 "  onclick="topFunction()">Next</a>
+                            <!-- next-prev -->
+                            <script>
+                                $('.btnNext6').click(function() {
+                                    $('.nav-pills > .active').next('button').tab('show');
+                                });
+                                $('.btnPrevious6').click(function() {
+                                    $('.nav-pills > .active').prev('button').tab('show');
+                                });
+                            </script>
+                            <!-- next-prev -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- LICENCE / CERTIFICATES OF COMPETENCY  -->
+
+                <!-- STCW AND OTHER CERTIFICATES -->
+                <style>
+                    table>:not(caption)>*>* {
+                        padding: 0.8rem 0.3rem !important;
+                    }
+                </style>
+                <div class="tab-pane fade " id="stcw" role="tabpanel" aria-labelledby="stcw-tab">
+                    <div class="container rounded-5 shadow p-3">
+                        <div class="display form-heading">
+                            <h4>STCW AND OTHER CERTIFICATES</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover border-rounded" id="tab_logic">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                STCW Courses
+                                            </th>
+                                            <th class="text-center">
+                                                Certificate No
+                                            </th>
+                                            <th class="text-center">
+                                                Date of issue
+                                            </th>
+                                            <th class="text-center">
+                                                Date of Expiry
+                                            </th>
+                                            <th class="text-center">
+                                                Place of Issue
+                                            </th>
+                                            <th class="text-center">
+                                                Issuing Authority/INSTITUTE
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='addx0'>
+                                            <th>
+                                                AFF (Fire Fighting)
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.aff_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.aff_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.aff_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.aff_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.aff_authority}}
+                                            </td>
+                                        </tr>
+
+                                        <!-- <div class="container">
+                                        <div class="d-flex justify-content-between">
+                                            <a id="add_row3" class="btn btn-primary pull-left" onclick="adding()">Add Row</a>
+                                            <a id='delete_row3' class="pull-right btn btn-primary" onclick="remov()">Delete Row</a>
+                                        </div>
+                                    </div> -->
+
+                                        <script>
+                                            function adding() {
+                                                document.getElementById("addx10").hidden = false;
+                                            }
+
+                                            function remov() {
+                                                document.getElementById("addx10").hidden = true;
+                                            }
+                                            /**
+document.getElementById("add_row3").addEventListener("click", function() {
+document.getElementById("welcome").hidden = true;
+document.getElementById("addx10").hidden = false;
+}, false);
+
+
+function adding(){
+
+let hidden = element.getAttribute("hidden");
+let element = document.getElementById("addx10");
+if (hidden) {
+element.removeAttribute("hidden");
+}
+}
+
+
+$("#add_row3").click(function(){
+if (hidden) {
+element.removeAttribute("hidden");
+
+}
+}
+let toggle = button => {
+let hidden = element.getAttribute("hidden");
+
+for(let i = 1; i < 12;i++){
+let element = document.getElementById("addx"+i);
+
+
+
+}
+if (hidden) {
+element.removeAttribute("hidden");
+button.innerText = "Hide tr";
+} else {
+element.setAttribute("hidden", "hidden");
+button.innerText = "Show tr";
+}
+} **/
+                                        </script>
+                                        <!-- <script>
+                                        $(document).ready(function(){
+                                            var i=1;
+                                           $("#add_row").click(function(){
+                                            $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='relation"+i+"' type='text' placeholder='Relationship'  class='form-control input-md'></td><td><input  name='dob"+i+"' type='date' placeholder='D.O.B' pattern=' '  class='form-control input-md'></td><td><input type='text' name='ppno"+i+"' placeholder='PP No.' class='form-control'/></td>");
+
+                                            $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+                                            i++;
+                                        });
+                                           $("#delete_row").click(function(){
+                                               if(i>1){
+                                               $("#addr"+(i-1)).html('');
+                                               i--;
+                                               }
+                                           });
+
+                                      });
+                                    </script> -->
+                                        <tr id='addx1'>
+                                            <th>
+                                                FP&FF
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.fp_ff_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.fp_ff_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.fp_ff_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.fp_ff_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.fp_ff_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                EFA
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.efa_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.efa_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.efa_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.efa_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.efa_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx3'>
+                                            <th>
+                                                MFA / MEDICARE
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.mfa_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.mfa_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.mfa_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.mfa_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.mfa_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx4'>
+                                            <th>
+                                                PST
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pst_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pst_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pst_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pst_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pst_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx5'>
+                                            <th>
+                                                PSCRB (Survival)
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pscrb_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pscrb_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pscrb_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pscrb_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pscrb_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx6'>
+                                            <th>
+                                                PSSR
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pssr_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pssr_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pssr_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pssr_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.pssr_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx7'>
+                                            <th>
+                                                SSO
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sso_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sso_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sso_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sso_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sso_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx8'>
+                                            <th>
+                                                STSDSD
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.stsdsd_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.stsdsd_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.stsdsd_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.stsdsd_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.stsdsd_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx9'>
+                                            <th>
+                                                ROC
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.roc_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.roc_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.roc_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.roc_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.roc_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx10'>
+                                            <th>
+                                                ARPA
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.arpa_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.arpa_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.arpa_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.arpa_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.arpa_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx11'>
+                                            <th>
+                                                GMDSS (GOC)
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_goc_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_goc_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_goc_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_goc_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_goc_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx11'>
+                                            <th>
+                                                GMDSS ENDORSEMENT
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_endor_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_endor_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_endor_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_endor_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gmdss_endor_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                REFRESHER & UPDATING
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.rau_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.rau_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.rau_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.rau_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.rau_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                RANSCO / NARAS
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ransco_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ransco_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ransco_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ransco_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ransco_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                SMS
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sms_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sms_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sms_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sms_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sms_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                INDOS NO.
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.indos_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.indos_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.indos_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.indos_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.indos_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th style="    background-color: #c4c2c2;">
+                                                SIMULATOR TRAINING
+                                            </th>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                ENGINE ROOM SIMULATOR
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.simulator_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.simulator_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.simulator_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.simulator_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.simulator_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr id='addx2'>
+                                            <th>
+                                                BTM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.btm_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.btm_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.btm_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.btm_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.btm_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                MARPOL
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.marpol_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.marpol_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.marpol_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.marpol_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.marpol_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                ECDIS (Generic)
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_ger_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_ger_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_ger_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_ger_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_ger_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                ECDIS (type specific)
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_specific_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_specific_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_specific_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_specific_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.ecdis_specific_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                RAAI
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.raai_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.raai_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.raai_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.raai_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.raai_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                BRM / ERM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.brm_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.brm_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.brm_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.brm_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.brm_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                BALLAST WATER MANAGEMENT
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.bwm_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.bwm_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.bwm_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.bwm_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.bwm_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                LARGE VESSEL HANDLING SIMULATOR COURSE
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lvhsc_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lvhsc_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lvhsc_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lvhsc_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lvhsc_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            {% comment %}
+                                            <th>
+                                                SIMULATOR COURSE
+                                            </th>
+                                            <td>
+                                                <input type="text" name='numb' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='doi' pattern=" " class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='dae' pattern=" " class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='dae' pattern=" " class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='poi' class="form-control" />
+                                            </td>
+                                        </tr> {% endcomment %}
+                                        <tr>
+                                            <th style="    background-color: #c4c2c2;">
+                                                TANKER COURSES
+                                            </th>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                TASCO / TANK FAM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.tasco_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.tasco_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.tasco_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.tasco_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.tasco_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                CHEMCO / CHEM FAM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.chemco_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.chemco_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.chemco_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.chemco_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.chemco_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                GASCO / GAS FAM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gasco_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gasco_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gasco_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gasco_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.gasco_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                DCE PETROLEUM
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_petro_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_petro_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_petro_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_petro_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_petro_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                DCE CHEMICAL
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_chem_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_chem_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_chem_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_chem_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_chem_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                DCE GAS
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_gas_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_gas_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_gas_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_gas_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.dce_gas_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                LIQUID CARGO & BALLAST
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lcab_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lcab_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lcab_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lcab_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.lcab_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th style="    background-color: #c4c2c2;">
+                                                OTHER COURSES
+                                            </th>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                MARITIME ENGLISH
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.me_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.me_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.me_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.me_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.me_authority}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                SHIP HANDLING & MANOEUVRING
+                                            </th>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sham_certificate_no}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sham_doi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sham_doe}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sham_poi}}
+                                            </td>
+                                            <td>
+                                                {{forms.STCWCertificatesForm.sham_authority}}
+                                            </td>
+                                        </tr>
+
+                                        <tr id='addx'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious7 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext7 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext7').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious7').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+                </div>
+                <!-- STCW AND OTHER CERTIFICATES  -->
+
+                <!-- References -->
+                <div class="tab-pane fade" id="reference" role="tabpanel" aria-labelledby="reference-tab">
+                    <div class="container rounded-3 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>REFERENCES</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column">
+                                <table class="table table-bordered table-hover" id="tab_logic2">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                Sr.no
+                                            </th>
+                                            <th class="text-center">
+                                                Name
+                                            </th>
+                                            <th class="text-center">
+                                                Company/Designation
+                                            </th>
+                                            <!-- <th class="text-center">
+                                            Date of Birth
+                                        </th> -->
+                                            <th class="text-center">
+                                                Telephone/Contact NO.
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='adding0'>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                <input type="text" name='name_ref' placeholder='Name' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='company0' placeholder='Company or Designation' class="form-control" />
+                                            </td>
+                                            <!-- <td>
+                                            <input type="date" name='dob0' placeholder='D.O.B' pattern=" " class="form-control"/>
+                                        </td> -->
+                                            <td>
+                                                <input type="number" name='phone0' placeholder='Contact NO.' class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr id='adding1'>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                <input type="text" name='name_ref' placeholder='Name' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='company0' placeholder='Company or Designation' class="form-control" />
+                                            </td>
+                                            <!-- <td>
+                                            <input type="date" name='dob0' placeholder='D.O.B' pattern=" " class="form-control"/>
+                                        </td> -->
+                                            <td>
+                                                <input type="number" name='phone0' placeholder='Contact NO.' class="form-control" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- <div class="container">
+                            <div class="d-flex justify-content-between">
+                                <a id="add_row2" class="btn btn-primary pull-left">Add Row</a>
+                                <a id='delete_row2' class="pull-right btn btn-primary">Delete Row</a>
+                            </div>
+                        </div> -->
+                        <!-- <script>
+                            $(document).ready(function() {
+                                var i = 1;
+                                $("#add_row2").click(function() {
+                                    $('#adding' + i).html("<td>" + (i + 1) +
+                                        "</td><td><input name='name_ref" +
+                                        "' type='text' placeholder='Name' class='form-control '  /> </td><td><input  name='company0" +
+                                        "' type='text' placeholder='Company or Designation'  class='form-control input-md'></td><td><input type='number' name='phone0" +
+                                        "' placeholder='Contact NO.' class='form-control'/></td>");
+                                    $('#tab_logic2').append('<tr id="adding' + (i + 1) + '"></tr>');
+                                    i++;
+                                });
+                                $("#delete_row2").click(function() {
+                                    if (i > 1) {
+                                        $("#adding" + (i - 1)).html('');
+                                        i--;
+                                    }
+                                });
+                            });
+                        </script> -->
+
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious8 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext8 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext8').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious8').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+                </div>
+                <!-- References  -->
+                <!-- HOW DID YOU COME TO KNOW ABOUT US? -->
+                <div class="tab-pane fade" id="how" role="tabpanel" aria-labelledby="how-tab">
+                    <div class="container rounded-3 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>HOW DID YOU COME TO KNOW ABOUT US?</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg">
+                                <table class="table table-bordered table-hover" id="tab_logic">
+
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-center">
+                                                A
+                                            </th>
+                                            <td>
+                                                <label for="">Company presentation/seminar</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                {% comment %} <input type="radio" name="yes_no"> Yes </input>
+                                                {% endcomment %} Yes:{{forms.AboutUSForm.comapany}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                B
+                                            </th>
+                                            <td>
+                                                <label for="">Marine Club notice-board</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.marin_club}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                C
+                                            </th>
+                                            <td>
+                                                <label for="">Marine magazine advertisement</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.marin_magzin}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                D
+                                            </th>
+                                            <td>
+                                                <label for="">Newspaper advertisement</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.newspaper}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                E
+                                            </th>
+                                            <td>
+                                                <label for="">Told by seagoing friend (s)</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.friend}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                F
+                                            </th>
+                                            <td>
+                                                <label for="">Direct Mail from Company</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.mail}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center">
+                                                G
+                                            </th>
+                                            <td>
+                                                <label for="">Others (Please specify)</label>
+                                            </td>
+                                            <td>
+                                                <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                                Yes:{{forms.AboutUSForm.other}}
+                                            </td>
+                                        </tr>
+
+                                        <tr id='addr1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious9 my-3 "  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext9 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext9').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious9').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+                </div>
+                <!-- HOW DID YOU COME TO KNOW ABOUT US?  -->
+
+                <!-- PERSONAL DETAILS -->
+                <div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+                    <div class="container rounded-3 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>PERSONAL DETAILS</h4>
+                        </div>
+                        <div class="d-flex column">
+                            <div class="mx-3 my-2">
+
+                                <label for="">Height: </label> {{forms.PersonalDetailsForm.height}}
+                            </div>
+                            <div class="mx-3 my-2">
+
+                                <label for="">Weight: </label> {{forms.PersonalDetailsForm.weight}}
+                            </div>
+                            <div class="mx-3 my-2">
+
+                                <label for="">BMI: </label> {{forms.PersonalDetailsForm.BMI}}
+                            </div>
+
+                        </div>
+                        <div class="d-flex column">
+                            <div class="mx-3 my-2">
+
+                                <label for="">Color of eyes: </label> {{forms.PersonalDetailsForm.color_of_eye}}
+                            </div>
+                            <div class="mx-3 my-2">
+
+                                <label for="">Color of Hair: </label> {{forms.PersonalDetailsForm.color_of_hair}}
+                            </div>
+                        </div>
+                        <div class="d-flex column">
+                            <div class="mx-3 my-2">
+
+                                <label for="">Any major illness / Surgery: </label> {{forms.PersonalDetailsForm.major_illness}}
+
+                            </div>
+                            <div class="mx-3 my-2">
+                                <label for="">If “YES”, kindly provide details separately: </label> {{forms.PersonalDetailsForm.major_illness_res}}
+                            </div>
+                        </div>
+                        <div class="d-flex column">
+                            <div class="mx-3 my-2">
+
+                                <label for="customer">
+                                <h6>Have any defect in hearing:</h6>
+                            </label> {{forms.PersonalDetailsForm.defect_in_hearing}}
+
+                                <br>
+                            </div>
+                            <div class="mx-3 my-2">
+
+                                <label for="customer">
+                                <h6>Have any defect in vision:</h6>
+                            </label> {{forms.PersonalDetailsForm.defect_in_vision}}
+                                <br>
+                            </div>
+                            <div class="mx-3 my-2">
+
+                                <label for="customer">
+                                <h6>Have any defect in speech:</h6>
+                            </label> {{forms.PersonalDetailsForm.defect_in_speech}}
+                                <br>
+                            </div>
+
+                        </div>
+                        <div class="d-flex row">
+
+                            <div class="mx-3 my-2">
+                                <label for="customer"></h6>If your health is affected by any particular climate?</label>
+                                <div class="col-3">{{forms.PersonalDetailsForm.affected_climate}}</div>
+
+                            </div>
+                            <br>
+                                <div class="mx-3 my-2">
+                                    <label>Please State : </h5></label> {{forms.PersonalDetailsForm.state}}
+                                </div>
+
+                        </div>
+
+                        <div class="d-flex row">
+
+                            <div class=" mx-3 my-2">
+                                <label>LAST DRAWN WAGES</label>
+                                <div class="col-6">{{forms.LDWForm.ldw}}</div>
+
+                            </div>
+                        </div>
+
+                        <!-- <div class="d-flex column">
+                        <div class="mx-3 my-2">
+
+
+                          </div>
+
+                    </div> -->
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious10 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext10 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext10').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious10').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+                </div>
+                <!-- PERSONAL DETAILS  -->
+
+                <!-- LAST DRAWN WAGES -->
+                <!-- <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
+
+                    <div class="container rounded-5 shadow p-4">
+
+
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious11 my-3">Previous</a>
+                            <a class="btn btn-primary btnNext11 my-3 ">Next</a>
+                        </div>
+                    </div>
+                    <!-- <script>
+                        $('.btnNext11').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious11').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script> -->
+                    <!-- next-prev -->
+                <!-- </div> -->
+                <!-- LAST DRAWN WAGES  -->
+
+                <!-- ADDITIONAL INFORMATION -->
+                <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+                    <div class="container rounded-5 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>ADDITIONAL INFORMATION</h4>
+                        </div>
+                        <table class="table table-bordered table-hover" id="tab_logic">
+
+                            <tbody>
+                                <tr>
+
+                                    <td>
+                                        <label for="">Have you applied to this company before?</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                            {{forms.Additional_infoForm.applied}}
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label for="">Have you ever been bonded by any insurance company or bonding
+                                        agency?</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <!-- <input type="radio" name='poi'  class="form-control"/> -->
+                                            {{forms.Additional_infoForm.aicoba}}
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label for="">Have you ever been convicted serious Criminal Offence, Other than
+                                        minor traffic regulation? If yes give full details.</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            {{forms.Additional_infoForm.criminal_offence}}
+
+                                        </div>
+                                        <div>
+                                            <label for="">Details: </label> {{forms.Additional_infoForm.criminal_offence_details}}
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label for="">Have you ever been in a ship involved in an incident?
+                                        If yes give full details.
+                                    </label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            {{forms.Additional_infoForm.ship_incident}}
+
+                                        </div>
+                                        <div>
+                                            <label for="">Details: </label> {{forms.Additional_infoForm.ship_incident_details}}
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <label for="">Has your certificate ever been suspended?
+                                        If yes state date of suspension.
+                                    </label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            {{forms.Additional_infoForm.suspended}}
+
+                                        </div>
+                                        <div class="my-2">
+
+                                            <label for="">From:</label> {{forms.Additional_infoForm.suspended_from}}
+                                        </div>
+                                        <div class="my-2 ">
+
+                                            <label for="">To:</label> {{forms.Additional_infoForm.suspended_to}}
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <tr id='addr1'></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious13 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext13 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext13').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious13').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                    <!-- next-prev -->
+                </div>
+                <!-- ADDITIONAL INFORMATION  -->
+
+                <!-- Reason for Application -->
+                <div class="tab-pane fade" id="reason" role="tabpanel" aria-labelledby="reason-tab">
+                    <div class="container rounded-5 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>REASON FOR APPLICATION </h4>
+                        </div>
+                        <table class="table table-bordered table-hover" id="tab_logic">
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="">State why you wish to leave your present employment</label>
+                                    </td>
+                                    <td>
+                                        {{forms.Reason_for_appForm.present_emp}}
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">You may add here anything further you wish to in support of your
+                                        application</label>
+                                    </td>
+                                    <td>
+                                        {{forms.Reason_for_appForm.support_application}}
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">May we approach your present employer for a reference?
+                                        If yes give contact details.
+                                    </label>
+                                    </td>
+                                    <td>
+                                        {{forms.Reason_for_appForm.reference}} <br> {{forms.Reason_for_appForm.contact_details}}
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">What notice do you require to attend an interview?</label>
+                                    </td>
+                                    <td>
+                                        {{forms.Reason_for_appForm.attend_interview}}
+                                    </td>
+
+                                </tr>
+                                <tr id='addr1'></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious14 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext14 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext14').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious14').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                </div>
+                <!-- Reason for Application  -->
+
+                <!-- SEA EXPERIENCE: (Most recent at Top) Special Experience -->
+                <div class="tab-pane fade" id="sea" role="tabpanel" aria-labelledby="sea-tab">
+                    <div class="container rounded-5 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>SEA EXPERIENCE:</h4>
+                            <small>
+                            <h4>(Most recent at Top) Special Experience</h4>
+                        </small>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column" style="overflow-x: scroll;">
+                                <table class="table table-bordered table-hover" style="width:2500px;" id="tab_logic4">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                Employer
+                                            </th>
+                                            <th class="text-center">
+                                                RPSL Agent
+                                            </th>
+                                            <th class="text-center">
+                                                Vessel NAME & Type
+                                            </th>
+                                            <th class="text-center">
+                                                Steam /Motor
+                                            </th>
+                                            <th class="text-center">
+                                                DWT/GRT
+                                            </th>
+                                            <th class="text-center">
+                                                RANK
+                                            </th>
+                                            <th class="text-center">
+                                                Engine MODEL
+                                            </th>
+                                            <th class="text-center">
+                                                BHP
+                                            </th>
+                                            <th class="text-center">
+                                                
+                                                Manned or Unmanned Engine Room
+                                            </th>
+                                            <th class="text-center">
+                                                FROM
+                                            </th>
+                                            <th class="text-center">
+                                                TO
+                                            </th>
+                                            <th class="text-center">
+                                                TOTAL
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='addy0'>
+                                            <td>
+                                                <input type="text" name='empl' placeholder="Enter employer" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='rspl0' placeholder="eg: THOME / AURUS" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='vessel0' placeholder="eg: SOUTHPORT / OIL TANKER" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <select class="form-control" name='stream_motor0' id="">
+                                                <option value=""></option>
+                                                <option value="steam">Steam</option>
+                                                <option value="motor">Motor</option>
+                                            </select>
+                                            </td>
+
+                                            <td>
+                                                <input type="number" name='dwt0' placeholder="eg: 115000" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='rank0' placeholder="eg: Master / Cadet" class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='engine0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='bhp0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <select name="engine_room" class="form-control">
+                                                    <option value="---" default>---</option>
+                                                    <option value="Manned">Manned</option>
+                                                    <option value="Unmanned">Unmanned</option>
+                                                    
+                                                  </select>
+                                            </td>
+                                            <td>
+                                                <input type="date" name='fromdt0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='todt0' pattern=" " class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="number" name='total0' placeholder="eg: 3.2" class="form-control" />
+                                            </td>
+                                            <!-- <td>
+                                            <input type="text" name='ppno0'  class="form-control"/>
+                                        </td> -->
+                                        </tr>
+                                        <tr id='addy1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="d-flex justify-content-between">
+                                <a id="add_row4" class="btn btn-primary pull-left">Add Row</a>
+                                <a id='delete_row4' class="pull-right btn btn-primary">Delete Row</a>
+                            </div>
+                        </div>
+                        <script>
+                            "+i+"
+                            $(document).ready(function() {
+                                var i = 1;
+                                $("#add_row4").click(function() {
+                                    $('#addy' + i)
+                                        .html("<td><input type='text' name='empl" +
+                                            "' placeholder='Enter employer' class='form-control'/> </td> <td><input type='text' name='rspl0" +
+                                            "' placeholder='eg: THOME / AURUS' class='form-control'/> </td> <td><input type='text' name='vessel0" +
+                                            "' placeholder='SOUTHPORT / OIL TANKER'  class='form-control'/></td><td><select class='form-control' name='stream_motor0" +
+                                            "' id=''><option value=''></option><option value='steam'>Steam</option><option value='motor'>Motor</option></select></td><td><input type='number' name='dwt0" +
+                                            "' placeholder='eg: 115000' class='form-control'/></td> <td><input type='text' name='rank0" +
+                                            "' placeholder='eg: Master / Cadet' class='form-control'/></td> <td><input type='text' name='engine0" +
+                                            "'  class='form-control'/></td> <td><input type='text' name='bhp0" +
+                                            "'  class='form-control'/></td> <td><input type='text' name='man_ums0" +
+                                            "' placeholder='eg: UMS / MANNED'  class='form-control'/></td> <td> <input type='date' name='fromdt0" +
+                                            "'  class='form-control'/></td> <td><input type='date' name='todt0" +
+                                            "'  pattern='' class='form-control'/></td> <td><input type='number' name='total0" +
+                                            "' placeholder='eg:3.2'  class='form-control'/></td>");
+                                    $('#tab_logic4').append('<tr id="addy' + (i + 1) + '"></tr>');
+                                    i++;
+                                });
+                                $("#delete_row4").click(function() {
+                                    if (i > 1) {
+                                        $("#addy" + (i - 1)).html('');
+                                        i--;
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious15 my-3"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext15 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                    <script>
+                        $('.btnNext15').click(function() {
+                            $('.nav-pills > .active').next('button').tab('show');
+                        });
+                        $('.btnPrevious15').click(function() {
+                            $('.nav-pills > .active').prev('button').tab('show');
+                        });
+                    </script>
+                </div>
+                <!-- SEA EXPERIENCE: (Most recent at Top) Special Experience  -->
+
+                <!-- On-Shore Service -->
+                <div class="tab-pane fade" id="shore" role="tabpanel" aria-labelledby="shore-tab">
+                    <div class="container rounded-5 shadow p-4">
+                        <div class="display form-heading">
+                            <h4>ON-SHORE SERVICES:</h4>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="col-md-12 column table-responsive-lg" style="overflow-x: scroll;">
+                                <table class="table table-bordered table-hover" style="width:2000px;" id="tab_logic5">
+                                    <thead>
+                                        <tr class="table-info">
+                                            <th class="text-center">
+                                                Sr. No.
+                                            </th>
+                                            <th class="text-center">
+                                                Employer
+                                            </th>
+                                            <th class="text-center">
+                                                Title
+                                            </th>
+                                            <th class="text-center">
+                                                Workshop/ Shipyard
+                                            </th>
+                                            <th class="text-center">
+                                                Name of Major Machines You Worked with
+                                            </th>
+                                            <th class="text-center">
+                                                No of Personnel Supervised by you
+                                            </th>
+                                            <th class="text-center">
+                                                Size & tonnage of Vessel Repaired
+                                            </th>
+                                            <th class="text-center">
+                                                Period (From)
+                                            </th>
+                                            <th class="text-center">
+                                                Period (To)
+                                            </th>
+                                            <th class="text-center">
+                                                Any other useful information
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='adder0'>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                <input type="text" name='empl0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='title0' class="form-control" />
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name='works0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='machine0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='pers0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='size0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='from0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="date" name='to0' class="form-control" />
+                                            </td>
+                                            <td>
+                                                <input type="text" name='any0' class="form-control" />
+                                            </td>
+
+                                        </tr>
+                                        <tr id='adder1'></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="d-flex justify-content-between">
+                                <a id="add_row5" class="btn btn-primary pull-left">Add Row</a>
+                                <a id='delete_row5' class="pull-right btn btn-primary">Delete Row</a>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function() {
+                                var y = 1;
+                                $("#add_row5").click(function() {
+                                    $('#adder' + y).html("<td>" + (y + 1) +
+                                        "</td><td><input type='text' name='empl0" +
+                                        "'   class='form-control'/></td> <td><input type='text' name='title0" +
+                                        "' class='form-control'/> </td> <td><input type='text' name='works0" +
+                                        "' class='form-control'/> </td> <td><input type='text' name='machine0" +
+                                        "' class='form-control'/> </td> <td><input type='text' name='pers0" +
+                                        "' class='form-control'/> </td> <td><input type='text' name='size0" +
+                                        "' class='form-control'/> </td> <td><input type='date' name='from0" +
+                                        "' class='form-control'/> </td> <td><input type='date' name='to0" +
+                                        "' class='form-control'/> </td> <td><input type='text' name='any0" +
+                                        "' class='form-control'/> </td>");
+                                    $('#tab_logic5').append('<tr id="adder' + (y + 1) + '"></tr>');
+                                    y++;
+                                });
+                                $("#delete_row5").click(function() {
+                                    if (y > 1) {
+                                        $("#adder" + (y - 1)).html('');
+                                        y--;
+                                    }
+                                });
+                            });
+                        </script>
+
+                    </div>
+
+                    <br>
+                    <div class="container">
+                        <div class="d-flex justify-content-between">
+                            <a class="btn btn-primary btnPrevious16 my-"  onclick="topFunction()">Previous</a>
+                            <a class="btn btn-primary btnNext16 my-3 "  onclick="topFunction()">Next</a>
+                        </div>
+                    </div>
+                    <!-- next-prev -->
+                </div>
+                <script>
+                    $('.btnNext16').click(function() {
+                        $('.nav-pills > .active').next('button').tab('show');
+                    });
+                    $('.btnPrevious16').click(function() {
+                        $('.nav-pills > .active').prev('button').tab('show');
+                    });
+                </script>
+
+                <!-- On-Shore Service -->
+
+                <!-- DECLARATION -->
+                <div class="tab-pane fade" id="declaration" role="tabpanel" aria-labelledby="declaration-tab">
+                    <div class="container rounded-5 shadow p-4">
+                        <h4>DECLARATION </h4> <br>
+                        <p>
+                            I declare that the information given by me in filling up this form to the best of my knowledge are true complete. I also declare that the documents submitted to NAUTICAL MARINE MANAGEMENT SERVICES PVT. LTD. Are genuine, given and signed by the persons
+                            whose names appear on them. Any false declaration may render me liable for termination or dismissal
+                        </p>
+                        <div class="d-flex column justify-content-around">
+                            <div class="d-flex my-3 row">
+                                <label for="">Date: </label> {{forms.DeclarationForm.date}}
+
+                            </div>
+                            <div class="">
+                                <p for="">Upload Passport size Photo</p>
+                                {{forms.DeclarationForm.photo}}
+
+                            </div>
+                            <div class="">
+
+                                <p>Click on the "Choose File" button to upload Signature of applicant:</p>
+                                {{forms.DeclarationForm.signature}}
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="container">
+                            <div class="d-flex justify-content-between">
+                                <a class="btn btn-primary btnPrevious17 my-3">Previous</a>
+
+                            </div>
+                            <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button>
+
+                        </div>
+                        <!-- next-prev -->
+
+                        <script>
+                            $('.btnPrevious17').click(function() {
+                                $('.nav-pills > .active').prev('button').tab('show');
+                            });
+                        </script>
+                    </div>
+                    <!-- DECLARATION -->
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--  -->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i style="padding: 5px;"class="fa-solid fa-arrow-up"></i></button>
+<style>
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(25, 112, 227);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</body>
+
+</html>
