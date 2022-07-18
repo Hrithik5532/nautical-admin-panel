@@ -165,7 +165,7 @@
 				<tbody >
 				   <tr>
 					  <td rowspan="3" colspan="2" width="80" height="2" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						 <img src="../static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
+						 <img src="..\static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
 						 </p>
 					  </td>
 					  <td rowspan="3" colspan="5" width="354" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><h2 lang="en-GB" class="western" style="font-style: normal; orphans: 0; widows: 0">
@@ -196,12 +196,13 @@
 						 <font color="#000000"><font face="Arial, serif"><font size="2" style="font-size: 9pt">1</font></font></font></h1>
 					  </td>
 				   </tr>
+				   {% load split_filter %}
 				   <tr>
 					  <td colspan="2" width="59" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><p lang="en-GB" class="western" align="right" style="orphans: 0; widows: 0">
 						 <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>Date:</b></font></font></p>
 					  </td>
 					  <td colspan="2" width="98" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-						 <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{profileDetails.created | date:"Y-m-d"}}</b></font></font></p>
+						 <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{parse_data.date | split }}</b></font></font></p>
 					  </td>
 				   </tr>
 				</tbody>
@@ -277,21 +278,21 @@
 				</p>
 			</td>
 			<td colspan="2" width="190" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{name}}  {{father}}  {{surname}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.first_name}}  {{parse_data.middle_name}}  {{parse_data.last_name}}<span lang="en-US"></span></font></font></p>
 			</td>
 			<td width="88" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">Nationality
 				:</font></font></p>
 			</td>
 			<td width="107" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">{{profileDetails.nationality.name}}</span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">{{parse_data.nationality}}</span></font></font></p>
 			</td>
 			<td colspan="2" width="76" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">Birth
 				Date :</font></font></p>
 			</td>
 			<td width="80" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{profileDetails.dob |date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.date_of_birth }}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -300,13 +301,13 @@
 				POST APPLIED FOR:</font></font></p>
 			</td>
 			<td colspan="3" width="296" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{atoc.ms_rank}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.rank_applied}}<span lang="en-US"></span></font></font></p>
 			</td>
 			<td width="40" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">Date:</font></font></p>
 			</td>
 			<td colspan="2" width="116" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{atoc.doa | date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.date_of_application }}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -315,7 +316,7 @@
 				CERTIFICATE HELD:</font></font></p>
 			</td>
 			<td colspan="6" width="480" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt"><strong>Grade:</strong>{{LCOC.ind_grade}} &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<strong>Number:</strong>{{LCOC.ind_no}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt"><strong>Grade:</strong>{{parse_data.indian_grade}} &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<strong>Number:</strong>{{parse_data.indian_number}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -324,7 +325,7 @@
 				of Expiry:</font></font></p>
 			</td>
 			<td colspan="6" width="480" style="border-top: 1px solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{LCOC.ind_doe |date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.indian_lisence_date_of_expiry }}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 	</table>
@@ -368,7 +369,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.pst_doe %}
+                    {% if parse_data.pst_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -376,7 +377,7 @@
                     {% endif %}
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pst_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pst_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -387,7 +388,7 @@
 				</ol>
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{% if STCWCertificates.fp_ff_doe %}
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{% if parse_data.fpff_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -395,7 +396,7 @@
                     {% endif %}</p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.fp_ff_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.fpff_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -407,7 +408,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.efa_doe %}
+                    {% if parse_data.efa_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -416,7 +417,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.efa_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.efa_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -428,7 +429,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.pssr_doe %}
+                    {% if parse_data.pssr_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -437,7 +438,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pssr_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pssr_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -449,7 +450,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.pscrb_doe %}
+                    {% if parse_data.pscrb_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -458,7 +459,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pscrb_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pscrb_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -470,7 +471,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.roc_doe %}
+                    {% if parse_data.roc_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -479,7 +480,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.roc_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.roc_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -507,7 +508,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.arpa_doe %}
+                    {% if parse_data.arpa_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -516,7 +517,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.arpa_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.arpa_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -528,7 +529,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                    {% if STCWCertificates.ecdis_ger_doe %}
+                    {% if parse_data.ecdis_generic_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -537,7 +538,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.ecdis_ger_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.ecdis_generic_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -562,7 +563,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.gmdss_endor_doe %}
+                      {% if parse_data.gmdss_endorsement_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -571,7 +572,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.gmdss_endor_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.gmdss_endorsement_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -583,7 +584,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.gasco_doe %}
+                      {% if parse_data.gasco_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -592,7 +593,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.gasco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.gasco_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -604,7 +605,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.chemco_doe %}
+                      {% if parse_data.chem_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -613,7 +614,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.chemco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.chem_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -625,7 +626,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.tasco_doe %}
+                      {% if parse_data.tasco_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -634,7 +635,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.tasco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.tasco_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -663,7 +664,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.dce_petro_doe %}
+                      {% if parse_data.dce_petrol_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -672,7 +673,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_petro_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_petrol_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -684,7 +685,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.dce_chem_doe %}
+                      {% if parse_data.dce_chem_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -693,7 +694,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_chem_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_chem_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -705,7 +706,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.dce_gas_doe %}
+                      {% if parse_data.dce_gas_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -714,7 +715,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_gas_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_gas_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -726,7 +727,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.aff_doe %}
+                      {% if parse_data.aff_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -735,7 +736,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.aff_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.aff_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -747,7 +748,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.mfa_doe %}
+                      {% if parse_data.mfa_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -756,7 +757,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.mfa_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.mfa_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -786,7 +787,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if passportDetails.pass_doe %}
+                      {% if parse_data.passport_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -795,7 +796,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{passportDetails.pass_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.passport_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -807,7 +808,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if CDCSB.ind_doe %}
+                      {% if parse_data.indian_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -816,7 +817,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{CDCSB.ind_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.indian_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -846,7 +847,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.btm_doe %}
+                      {% if parse_data.btm_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -855,7 +856,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.btm_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.btm_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -867,7 +868,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.sham_doe %}
+                      {% if parse_data.sham_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -876,7 +877,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.sham_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.sham_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -888,7 +889,7 @@
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if STCWCertificates.sso_doe %}
+                      {% if parse_data.sso_date_of_expiry %}
                     <input type="checkbox" checked/></font></font></p>
                     {% else %}
                     <input type="checkbox" /></font></font></p>
@@ -897,7 +898,7 @@
                 </font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.sso_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.sso_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -1098,7 +1099,7 @@
 		<tbody>
 			<tr>
 				<td rowspan="3" colspan="2" width="80" height="2" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-					<img src="../static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
+					<img src="..\static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
 					</p>
 				</td>
 				<td rowspan="3" colspan="5" width="354" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><h2 lang="en-GB" class="western" style="font-style: normal; orphans: 0; widows: 0">
@@ -1134,7 +1135,7 @@
 					<font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>Date:</b></font></font></p>
 				</td>
 				<td colspan="2" width="98" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-					<font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{profileDetails.created | date:"Y-m-d"}}</b></font></font></p>
+					<font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{parse_data.created }}</b></font></font></p>
 				</td>
 			</tr>
 		</tbody>
@@ -1214,21 +1215,21 @@
                     </p>
                 </td>
                 <td colspan="2" width="190" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{name}}  {{father}}  {{surname}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.first_name}}  {{parse_data.middle_name}}  {{parse_data.last_name}}<span lang="en-US"></span></font></font></p>
                 </td>
                 <td width="88" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
                     <font face="Arial, serif"><font size="2" style="font-size: 11pt">Nationality
                     :</font></font></p>
                 </td>
                 <td width="107" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">{{profileDetails.nationality.name}}</span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt"><span lang="en-US">{{parse_data.nationality}}</span></font></font></p>
                 </td>
                 <td colspan="2" width="76" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
                     <font face="Arial, serif"><font size="2" style="font-size: 11pt">Birth
                     Date :</font></font></p>
                 </td>
                 <td width="80" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{profileDetails.dob |date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.date_of_birth}}<span lang="en-US"></span></font></font></p>
                 </td>
             </tr>
             <tr>
@@ -1237,13 +1238,13 @@
                     POST APPLIED FOR:</font></font></p>
                 </td>
                 <td colspan="3" width="296" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{atoc.ms_rank}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.rank_applied}}<span lang="en-US"></span></font></font></p>
                 </td>
                 <td width="40" valign="top" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="left" style="orphans: 0; widows: 0">
                     <font face="Arial, serif"><font size="2" style="font-size: 11pt">Date:</font></font></p>
                 </td>
                 <td colspan="2" width="116" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{atoc.doa | date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.date_of_availability }}<span lang="en-US"></span></font></font></p>
                 </td>
             </tr>
             <tr>
@@ -1252,7 +1253,7 @@
                     CERTIFICATE HELD:</font></font></p>
                 </td>
                 <td colspan="6" width="480" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt"><strong>Grade:</strong>{{LCOC.ind_grade}} &nbsp;&nbsp;&nbsp; <strong>Number:</strong>{{LCOC.ind_no}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt"><strong>Grade:</strong>{{parse_data.indian_grade}} &nbsp;&nbsp;&nbsp; <strong>Number:</strong>{{parse_data.indian_number}}<span lang="en-US"></span></font></font></p>
                 </td>
             </tr>
             <tr>
@@ -1261,7 +1262,7 @@
                     of Expiry:</font></font></p>
                 </td>
                 <td colspan="6" width="480" style="border-top: 1px solid #000000; border-bottom: 1.50pt solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{LCOC.ind_doe |date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+                    <font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.indian_lisence_date_of_expiry }}<span lang="en-US"></span></font></font></p>
                 </td>
             </tr>
         </table>
@@ -1307,7 +1308,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							{% if STCWCertificates.pst_doe %}
+							{% if parse_data.pst_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1315,7 +1316,7 @@
 							{% endif %}
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pst_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pst_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1326,7 +1327,7 @@
 						</ol>
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{% if STCWCertificates.fp_ff_doe %}
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{% if parse_data.fp_ff_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1334,7 +1335,7 @@
 							{% endif %}</p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.fp_ff_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.fp_ff_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1346,7 +1347,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							{% if STCWCertificates.efa_doe %}
+							{% if parse_data.efa_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1355,7 +1356,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.efa_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.efa_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1367,7 +1368,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							{% if STCWCertificates.pssr_doe %}
+							{% if parse_data.pssr_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1376,7 +1377,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pssr_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pssr_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1388,7 +1389,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							{% if STCWCertificates.pscrb_doe %}
+							{% if parse_data.pscrb_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1397,7 +1398,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.pscrb_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pscrb_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				
@@ -1411,7 +1412,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.gasco_doe %}
+							  {% if parse_data.gasco_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1420,7 +1421,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.gasco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.gasco_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1432,7 +1433,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.chemco_doe %}
+							  {% if parse_data.chemco_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1441,7 +1442,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.chemco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.chemco_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1453,7 +1454,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.tasco_doe %}
+							  {% if parse_data.tasco_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1462,7 +1463,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.tasco_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.tasco_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1491,7 +1492,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.dce_petro_doe %}
+							  {% if parse_data.dce_petro_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1500,7 +1501,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_petro_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_petro_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1512,7 +1513,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.dce_chem_doe %}
+							  {% if parse_data.dce_chem_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1521,7 +1522,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_chem_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_chem_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1533,7 +1534,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.dce_gas_doe %}
+							  {% if parse_data.dce_gas_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1542,7 +1543,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.dce_gas_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.dce_gas_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1554,7 +1555,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if STCWCertificates.aff_doe %}
+							  {% if parse_data.aff_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1563,7 +1564,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{STCWCertificates.aff_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.aff_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				
@@ -1577,7 +1578,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if passportDetails.pass_doe %}
+							  {% if parse_data.pass_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1586,7 +1587,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{passportDetails.pass_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pass_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1598,7 +1599,7 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if CDCSB.ind_doe %}
+							  {% if parse_data.ind_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
 							{% else %}
 							<input type="checkbox" /></font></font></p>
@@ -1607,7 +1608,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{CDCSB.ind_doe|date:"Y-m-d"}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.ind_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>

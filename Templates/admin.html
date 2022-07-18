@@ -220,7 +220,10 @@
                             <li class="nav-btn" style="">
                                 <a class="navigation-link" href="{% url 'logout'%}">Log Out</a>
                             </li>
-                            
+                            {% else %}
+                            <li class="nav-btn" style="">
+                                <a class="navigation-link" href="{% url 'login'%}">Log In</a>
+                            </li>
                             {% endif %}
                         </ul>
                     </div>

@@ -820,8 +820,8 @@
                <tbody >
                   <tr>
                      <td rowspan="3" colspan="2" width="80" height="2" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                        <img src="../static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
-                        </p>
+                        <img src="..\static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
+                     </p>
                      </td>
                      <td rowspan="3" colspan="5" width="354" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><h2 lang="en-GB" class="western" style="font-style: normal; orphans: 0; widows: 0">
                         <font face="Arial Black, serif"><font size="4" style="font-size: 16px!important;">OFFICE
@@ -851,12 +851,14 @@
                         <font color="#000000"><font face="Arial, serif"><font size="2" style="font-size: 9pt">1</font></font></font></h1>
                      </td>
                   </tr>
+                  {% load split_filter %}
+
                   <tr>
                      <td colspan="2" width="59" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><p lang="en-GB" class="western" align="right" style="orphans: 0; widows: 0">
                         <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>Date:</b></font></font></p>
                      </td>
                      <td colspan="2" width="98" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-                        <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{profileDetails.created | date:"Y-m-d"}}</b></font></font></p>
+                        <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{parse_data.declaration_date}}</b></font></font></p>
                      </td>
                   </tr>
                </tbody>
@@ -1577,10 +1579,10 @@
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>22.<span
                         style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>If your Health is
-                        affected by any particular climate, please state: &nbsp;{{parse_data.health_affected_by_climate}}</span>
+                        affected by any particular climate: &nbsp;{{parse_data.health_affected_by_climate}}</span>
                      </p>
                      <p class=MsoNormal><span
-                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{parse_data.health_affected_by_climate_reason}}</strong></p>
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>please state:{{parse_data.health_affected_by_climate_reason}}</p>
                   </td>
                </tr>
                <tr style='height:21.0pt'>
@@ -2758,7 +2760,7 @@
                      </p>
                   </td>
                </tr>
-               {% for i in SEA_Exp  %}
+               {% for i in parse_data.special_experience  %}
                <tr style='height:13.9pt'>
                   <td width=55 valign=top style='width:41.4pt;border:solid windowtext 1.0pt;
                      border-top:none;padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
@@ -2767,17 +2769,17 @@
                   <td width=147 valign=top style='width:110.6pt;border-top:none;border-left:
                      none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.employer}}/p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.Employer}}/p>
                   </td>
                   <td width=92 colspan=2 valign=top style='width:69.35pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'></span>From:{{i.date_from|date:"Y-m-d"}},To:{{i.date_to|date:"Y-m-d"}} </p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'></span>From:{{i.from}},To:{{i.to}} </p>
                   </td>
                   <td width=76 colspan=2 valign=top style='width:56.95pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.rank}}</p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.RANK}}</p>
                   </td>
                   <td width=83 colspan=2 valign=top style='width:62.25pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2792,17 +2794,17 @@
                   <td width=75 colspan=2 valign=top style='width:55.95pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.dwt_grt}}</p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.DWT}}</p>
                   </td>
                   <td width=108 colspan=2 valign=top style='width:81.25pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>Engine:</strong>{{i.engine}} <strong>&  BHP :</strong>{{i.bhp}}</p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>Engine:</strong>{{i.engine_model}} <strong>&  BHP :</strong>{{i.BHP}}</p>
                   </td>
                   <td width=114 valign=top style='width:85.2pt;border-top:none;border-left:
                      none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:13.9pt'>
-                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.engin_room}}</p>
+                     <p class=MsoNormal><span style='font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.manned_unmanned_engine_room}}</p>
                   </td>
                   <td width=189 colspan=2 valign=top style='width:142.1pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -2999,7 +3001,7 @@
             <tbody >
                <tr>
                   <td rowspan="3" colspan="2" width="80" height="2" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-                     <img src="../static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
+                     <img src="..\static\media\logos\amptc2.jpg" name="Picture 1" align="bottom" width="70" height="65" border="0"/>
                      </p>
                   </td>
                   <td rowspan="3" colspan="5" width="354" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding: 0in"><h2 lang="en-GB" class="western" style="font-style: normal; orphans: 0; widows: 0">
@@ -3035,7 +3037,7 @@
                      <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>Date:</b></font></font></p>
                   </td>
                   <td colspan="2" width="98" style="border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: 1px solid #000000; padding-top: 0in; padding-bottom: 0in; padding-left: 0in; padding-right: 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
-                     <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{profileDetails.created | date:"Y-m-d"}}</b></font></font></p>
+                     <font face="Arial, serif"><font size="2" style="font-size: 9pt"><b>{{parse_data.date| split}}</b></font></font></p>
                   </td>
                </tr>
             </tbody>
@@ -3116,18 +3118,17 @@
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>Years Acquainted</span></p>
                   </td>
                </tr>
-               {% for i in reference %}
                <tr style='height:19.6pt'>
                   <td width=185 colspan=2 valign=top style='width:138.4pt;border:solid windowtext 1.0pt;
                      border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
                      <p class=MsoNormal><span
-                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.name1|default_if_none:""}}</p>
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{parse_data.reference_name_1|default_if_none:""}}</p>
                   </td>
                   <td width=242 colspan=3 valign=top style='width:181.65pt;border-top:none;
                      border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                      padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
                      <p class=MsoNormal><span
-                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{i.contact|default_if_none:""}}</p>
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{parse_data.reference_telephone_1|default_if_none:""}}</p>
                   </td>
                   <td width=115 valign=top style='width:86.5pt;border-top:none;border-left:
                      none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -3142,7 +3143,31 @@
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
                   </td>
                </tr>
-               {% endfor %}
+               <tr style='height:19.6pt'>
+                  <td width=185 colspan=2 valign=top style='width:138.4pt;border:solid windowtext 1.0pt;
+                     border-top:none;padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
+                     <p class=MsoNormal><span
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{parse_data.reference_name_2|default_if_none:""}}</p>
+                  </td>
+                  <td width=242 colspan=3 valign=top style='width:181.65pt;border-top:none;
+                     border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                     padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
+                     <p class=MsoNormal><span
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{parse_data.reference_telephone_2|default_if_none:""}}</p>
+                  </td>
+                  <td width=115 valign=top style='width:86.5pt;border-top:none;border-left:
+                     none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                     padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
+                     <p class=MsoNormal><span
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  </td>
+                  <td width=152 colspan=2 valign=top style='width:113.65pt;border-top:none;
+                     border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                     padding:0in 5.4pt 0in 5.4pt;height:19.6pt'>
+                     <p class=MsoNormal><span
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  </td>
+               </tr>
                <tr style='height:57.55pt'>
                   <td width=694 colspan=8 valign=top style='width:520.2pt;border:solid windowtext 1.0pt;
                      border-top:none;padding:0in 5.4pt 0in 5.4pt;height:57.55pt'>
@@ -3153,12 +3178,12 @@
                         convicted serious Criminal Offence, other than minor traffic regulation?</span>
                      </p>
                      <p class=MsoNormal><span
-                        style='font-size:11.0pt;font-family:"Arial",sans-serif'><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{Additional_info.criminal_offence}} </strong></span></p>
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{parse_data.crime_convicted}} </strong></span></p>
                      <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If
                         “Yes”, give full detail:</span>
                      </p>
                      <p class=MsoNormal><span
-                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;{{Additional_info.criminal_offence_details}}</p>
+                        style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;{{parse_data.crime_convicted_details}}</p>
                   </td>
                </tr>
                <tr style='height:122.25pt'>
@@ -3185,9 +3210,9 @@
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>Physical Record</span></p>
                      <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Have
                         you any defect in hearing </span><u><span
-                           style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{PersonalDetails.defect_in_hearing}}</strong></u><span
-                           style='font-size:11.0pt;font-family:"Arial",sans-serif'> in vision </span><u><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{PersonalDetails.defect_in_vision}}</strong></u><span
-                           style='font-size:11.0pt;font-family:"Arial",sans-serif'> in speech </span><u><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{PersonalDetails.defect_in_speech}}</strong></u><span
+                           style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{parse_data.defect_in_hearing}}</strong></u><span
+                           style='font-size:11.0pt;font-family:"Arial",sans-serif'> in vision </span><u><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{parse_data.defect_in_vision}}</strong></u><span
+                           style='font-size:11.0pt;font-family:"Arial",sans-serif'> in speech </span><u><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>{{parse_data.defect_in_speech}}</strong></u><span
                            style='font-size:11.0pt;font-family:"Arial",sans-serif'>?</span>
                      </p>
                      <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Give
@@ -3218,9 +3243,9 @@
                      <p class=MsoNormal style='margin-right:4.45pt;text-align:justify'><span
                         style='font-size:11.0pt;font-family:"Arial",sans-serif'>Signature:</span></p>
                   </td>
-                  <td width=258 colspan=2 valign=top style='width:193.5pt;border:none;
+                  <td width=20 colspan=2 valign=top style='width:10.5pt;border:none;
                     padding:0in 5.4pt 0in 5.4pt;height:17.05pt'>
-                     <p class=MsoNormal style='margin-right:4.45pt;text-align:justify'><span style='font-size:11.0pt;font-family:"Arial",sans-serif'></span> <img src="../static/media/{{Declaration.signature}}"style="height:60px" alt="SIGNATURE">
+                     <p class=MsoNormal style='margin-right:;text-align:justify'><span style='font-size:11.0pt;font-family:"Arial",sans-serif'></span> <img src="{{parse_data.signature_photo}}"style="height:60px" alt="SIGNATURE">
                      </p>
                   </td>
                   <td width=59 valign=top style='width:44.45pt;border:none;padding:0in 5.4pt 0in 5.4pt;
