@@ -666,7 +666,7 @@
                <td width=139 rowspan=6 style='width:104.2pt;border:solid windowtext 1.0pt;
                   border-left:none;padding:0in 5.4pt 0in 5.4pt;height:14.2pt'>
                   <p class=MsoNormal align=center style='text-align:center'><b><span
-                     lang=EN-GB style=''><img src="{{parse_data.formal_photo}}" alt=""></span></b></p>
+                     lang=EN-GB style=''><img src="{{parse_data.formal_photo}}" alt="" style="    width: 154px !important;"></span></b></p>
                </td>
             </tr>
             <tr style='height:14.2pt'>
@@ -722,10 +722,10 @@
                <td  colspan=2 valign=top style='    border:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal style='margin-top:4.8pt'><b><span lang=EN-GB
-                     style='font-size:9.0pt'>Married: No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
+                     style='font-size:9.0pt'>Married:{% if parse_data.maritial_status == 'Married' %} Yes {% else %} No{% endif %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
                      lang=EN-GB style='font-size:9.0pt'><a name=Check21></a></span></b><b><span
-                     lang=EN-GB style='font-size:9.0pt'>                Yes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Check22></a></span></b><b><span
-                     lang=EN-GB style='font-size:9.0pt'>           If yes, Wife’s Name:                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date
+                     lang=EN-GB style='font-size:9.0pt'>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Check22></a></span></b><b><span
+                     lang=EN-GB style='font-size:9.0pt'>           If yes, Wife’s Name:     {% if parse_data.maritial_status == 'Married' %} {{parse_data.name_of_wife}} {% else %} {% endif %}               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date
                      Married: </span></b>
                   </p>
                   <p class=MsoNormal style='margin-top:4.8pt'><b><span lang=EN-GB
@@ -749,7 +749,7 @@
                   border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal style='margin-top:4.8pt'><b><span lang=EN-GB
                      style='font-size:9.0pt'>No. of Children:</span></b><b><span
-                     lang=EN-GB style='font-size:9.0pt'><a name=Text69></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
+                     lang=EN-GB style='font-size:9.0pt'><a name=Text69></a>{{parse_data.no_of_child}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
                      lang=EN-GB style='font-size:9.0pt'>                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         Please
                      give their names and dates of birth.</span></b>
                   </p>
@@ -760,6 +760,11 @@
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt;width:50%'>
                   <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB</span></b></p>
                </td>
+
+
+
+
+               
                <td  style='border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -771,7 +776,7 @@
 
                <td style='border:solid windowtext 1.0pt;border-top:
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>1. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text70></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
+                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>1.  </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text70></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
                </td>
                <td width=331 style='border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -779,6 +784,7 @@
                   <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>4. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text73></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
                </td>
             </tr>
+
             <tr style='height:11.35pt'>
                <td style='border:solid windowtext 1.0pt;border-top:
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -790,11 +796,16 @@
                   <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>5. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text74></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
                </td>
             </tr>
+
+
+
+
+
             <tr style='height:11.35pt;border:1.5px solid black;'>
                <td  colspan=2 style='  id windowtext 1.0pt;
                   border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Full Name of
-                     Next of Kin:    {{parse_date.name_of_kin}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationship:{{parse_date.relation}}
+                     Next of Kin:    {{parse_data.name_of_kin}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Relationship:{{parse_data.relation}} 
                      </span></b>
                   </p>
                </td>
@@ -802,11 +813,11 @@
             <tr style='height:11.35pt'>
                <td  colspan=2 style=' ;border:1.5px solid black; id windowtext 1.0pt;
                   border-top:none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Address: {{parse_date.add_nkd}}</span></b></p>
+                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Address: {{parse_data.add_nkd}}</span></b></p>
                   <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>&nbsp;</span></b></p>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Tel: </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text78></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
-                     lang=EN-GB style='font-size:9.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile:</span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text79></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
-                     lang=EN-GB style='font-size:9.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:
+                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Tel:</span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text78></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
+                     lang=EN-GB style='font-size:9.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile:&nbsp;&nbsp;&nbsp;{{parse_data.telephone_permanent}}</span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text79></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
+                     lang=EN-GB style='font-size:9.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:&nbsp;&nbsp;&nbsp;{{parse_data.email_permanent}}
                      </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text80></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b><b><span
                         lang=EN-GB style='font-size:9.0pt'>       </span></b>
                   </p>
@@ -885,6 +896,9 @@
                      Book</span></b>
                   </p>
                </td>
+
+               {% if parse_data.indian_certificate_no  %}
+
                <td width=164 style='width:122.95pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -905,7 +919,62 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_date_of_expiry}}</span></p>
                </td>
+               {% elif parse_data.panama_certificate_no  %}
+
+               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_certificate_no}}</span></p>
+               </td>
+               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_place_of_issue}}</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.others_certificate_no  %}
+               
+               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_certificate_no}}</span></p>
+               </td>
+               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_place_of_issue}}</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_date_of_expiry}}</span></p>
+               </td>
+               {% endif %}
+
+
+
             </tr>
+
+
+
+
+
+
             <tr style='height:11.35pt'>
                <td width=127 style='width:95.05pt;border:solid windowtext 1.0pt;border-top:
                   none;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -913,6 +982,8 @@
                      of C State Med</span></b>
                   </p>
                </td>
+
+
                <td width=164 style='width:122.95pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -933,6 +1004,11 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'><a name=Text90></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
                </td>
+
+
+
+
+
             </tr>
          </table>
 
@@ -979,27 +1055,156 @@
                      of C</span></b>
                   </p>
                </td>
+
+               {% if parse_data.uk_grade %}
+               
                <td width=164 style='width:123.0pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>59</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_grade}}</span></p>
                </td>
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'>&nbsp;</span></p>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>91</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_liscence_date_of_issue}}</span></p>
                </td>
                <td width=114 style='width:85.2pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>62</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_lisence_date_of_expiry}}</span></p>
                </td>
+               
+               {% elif parse_data.indian_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_grade}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.aus_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_grade}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.singapore_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_grade}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_lisence_date_of_expiry}}</span></p>
+               </td>
+
+
+               {% elif parse_data.panama_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_grade}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.others_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_grade}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_lisence_date_of_expiry}}</span></p>
+               </td>
+
+
+
+               {% endif %}
+
+
             </tr>
+
+
+
+
             <tr style='height:11.35pt'>
                <td width=127 style='width:95.1pt;border:solid windowtext 1.0pt;border-top:
                   none;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
@@ -1008,7 +1213,7 @@
                <td width=164 style='width:123.0pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.gmdss_certificate_no}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.gmdss_cerificate_no}}</span></p>
                </td>
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1029,22 +1234,22 @@
             <tr style='height:11.35pt'>
                <td width=127 style='width:95.1pt;border:solid windowtext 1.0pt;border-top:
                   none;background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt;color:black'>                -ROC</span></b></p>
+                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt;color:black'>-ROC</span></b></p>
                </td>
                <td width=164 style='width:123.0pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_certificate_no}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_cerificate_no}}</span></p>
                </td>
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_place_of_issue}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_place_of_issue}}</span><span lang=EN-GB style='font-size:9.0pt'><a name=Text97></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_date_of_issue}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_date_of_issue}}</span><span lang=EN-GB style='font-size:9.0pt'><a name=Text100></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
                </td>
                <td width=114 style='width:85.2pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1052,6 +1257,7 @@
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.roc_date_of_expiry}}</span></p>
                </td>
             </tr>
+            
          </table>
 
 
@@ -1097,7 +1303,7 @@
                <td width=164 style='width:122.95pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_petrol_certificate_no}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_petrol_cerificate_no}}</span></p>
                </td>
                <td width=153 style='width:114.8pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1124,7 +1330,7 @@
                <td width=164 style='width:122.95pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_gas_certificate_no}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_gas_cerificate_no}}</span></p>
                </td>
                <td width=153 style='width:114.8pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1151,7 +1357,7 @@
                <td width=164 style='width:122.95pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_chem_certificate_no}}</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.dce_chem_cerificate_no}}</span></p>
                </td>
                <td width=153 style='width:114.8pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1188,8 +1394,8 @@
                      </td>
                      <td  style="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in"><p lang="en-GB" align="right" style="orphans: 0; widows: 0">
                         <font face="Arial, serif"><font size="2" style="font-size: 9pt">Page
-                        <span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>1</sdfield></span>
-                        of <span style="background: #c0c0c0"><sdfield type=DOCSTAT subtype=PAGE format=PAGE>2</sdfield></span></font></font></p>
+                        <span style="background: "><sdfield type=PAGE subtype=RANDOM format=PAGE>1</sdfield></span>
+                        of <span style="background: "><sdfield type=DOCSTAT subtype=PAGE format=PAGE>3</sdfield></span></font></font></p>
                      </td>
                   </tr>
                </table>
@@ -1877,13 +2083,15 @@
                   <p class=MsoNormal align=center style='text-align:center'><b><span
                      lang=EN-GB style='font-size:9.0pt;color:black'>Name</span></b></p>
                </td>
-               <td width=48 style='width:35.85pt;border-top:none;border-left:none;
+               <td width=48 style='width:35.85pt;    border-top: 1px solid;
+               ;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   background:#F3F3F3;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal align=center style='text-align:center'><b><span
                      lang=EN-GB style='font-size:9.0pt;color:black'>Type</span></b></p>
                </td>
-               <td width=59 style='width:44.2pt;border-top:none;border-left:none;border-bottom:
+               <td width=59 style='width:44.2pt;    border-top: 1px solid;
+               ;border-left:none;border-bottom:
                   solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F3F3F3;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal align=center style='text-align:center'><b><span
@@ -1927,7 +2135,23 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal style='margin-top:0in;margin-right:-2.85pt;margin-bottom:
                      0in;margin-left:-5.65pt;margin-bottom:.0001pt'><span lang=EN-GB
-                     style='font-size:9.0pt'>&nbsp;</span></p>
+                     style='font-size:9.0pt'>
+                     {% if parse_data.indian_grade %}
+                     {{parse_data.indian_grade}}
+                     
+                     {% elif parse_data.uk_grade %}
+                     {{parse_data.uk_grade}}
+                     {% elif parse_data.aus_grade %}
+                     {{parse_data.aus_grade}}
+                     {% elif parse_data.singapore_grade %}
+                     {{parse_data.singapore_grade}}
+                     {% elif parse_data.others_grade %}
+                     {{parse_data.others_grade}}
+
+                     {% endif %}
+
+                  
+                  </span></p>
                </td>
                <td width=51 valign=top style='width:38.5pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1948,7 +2172,7 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal align=center style='margin-top:0in;margin-right:-2.85pt;
                      margin-bottom:0in;margin-left:-5.65pt;margin-bottom:.0001pt;text-align:center'><span
-                     lang=EN-GB style='font-size:9.0pt'>&nbsp;</span></p>
+                     lang=EN-GB style='font-size:9.0pt'>{{i.vessel_type}}</span></p>
                </td>
                <td width=59 valign=top style='width:44.2pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1998,9 +2222,10 @@
                </td>
                <td width=315 style='width:236.45pt;border:solid windowtext 1.0pt;border-left:
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.45pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'> </span><span lang=EN-GB style='font-size:9.0pt'>    {% if parse_data.ship_accident == 'Yes' %}YES{% else %}
-                     No </span><span
-                        lang=EN-GB style='font-size:9.0pt'>  120B</span>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'> </span><span lang=EN-GB style='font-size:9.0pt'>    {% if parse_data.ship_accident == 'Yes' %}YES    <br>          <span lang=EN-GB style='font-size:9.0pt'>  {{parse_data.ship_accident_details}}</span>
+
+                     {% else %}
+                     No </span>
                   </p>
                   {% endif %} 
                </td>
@@ -2038,7 +2263,7 @@
                      your Certificate ever been suspended?</span>
                   </p>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt;color:black'>If
-                     yes, state dates of suspension? 121 C</span>
+                     yes, state dates of suspension? </span>
                   </p>
                </td>
                <td width=315 style='width:236.45pt;border-top:none;border-left:none;
@@ -2046,12 +2271,11 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.45pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'> </span><span lang=EN-GB style='font-size:9.0pt'><a name=Check23></a></span><span lang=EN-GB
                      style='font-size:9.0pt'> {% if parse_data.certificate_suspended == 'Yes' %} Yes
-                     {% else %}
-                       No </span><span
-                        lang=EN-GB style='font-size:9.0pt'> 121 B</span>
+                     <p class=MsoNormal><span lang=EN-GB style='font-size:8.0pt'>From: {{parse_data.certificate_suspended_from}}                            to:{{Additional_info.suspended_to}}</span></p>
+                        {% else %}
+                       No </span>
                   </p>
                   {% endif %} 
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:8.0pt'>From: {{parse_data.certificate_suspended_from}}                            to:{{Additional_info.suspended_to}}</span></p>
                </td>
             </tr>
          </table>
@@ -2076,8 +2300,8 @@
                      </td>
                      <td  style="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in"><p lang="en-GB" align="right" style="orphans: 0; widows: 0">
                         <font face="Arial, serif"><font size="2" style="font-size: 9pt">Page
-                        <span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>1</sdfield></span>
-                        of <span style="background: #c0c0c0"><sdfield type=DOCSTAT subtype=PAGE format=PAGE>2</sdfield></span></font></font></p>
+                        <span style="background: "><sdfield type=PAGE subtype=RANDOM format=PAGE>2</sdfield></span>
+                        of <span style="background: "><sdfield type=DOCSTAT subtype=PAGE format=PAGE>3</sdfield></span></font></font></p>
                      </td>
                   </tr>
                </table>
@@ -2137,9 +2361,9 @@
                   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.3pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'> </span><span lang=EN-GB style='font-size:9.0pt'>   {% if parse_data.may_approach_employer == 'Yes' %} Yes
+                     <span   lang=EN-GB style='font-size:9.0pt'>  {{parse_data.employer_contact_details}}</span>
                      {% else %}
-                     No </span><br>   <span
-                        lang=EN-GB style='font-size:9.0pt'>  {{parse_data.employer_contact_details}}</span>
+                     No </span><br>  
                   </p>
                   {% endif %}    
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>&nbsp;</span></p>
@@ -2257,8 +2481,8 @@
                   </td>
                   <td  style="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding: 0in"><p lang="en-GB" align="right" style="orphans: 0; widows: 0">
                      <font face="Arial, serif"><font size="2" style="font-size: 9pt">Page
-                     <span style="background: #c0c0c0"><sdfield type=PAGE subtype=RANDOM format=PAGE>1</sdfield></span>
-                     of <span style="background: #c0c0c0"><sdfield type=DOCSTAT subtype=PAGE format=PAGE>2</sdfield></span></font></font></p>
+                     <span style="background: "><sdfield type=PAGE subtype=RANDOM format=PAGE>3</sdfield></span>
+                     of <span style="background: "><sdfield type=DOCSTAT subtype=PAGE format=PAGE>3</sdfield></span></font></font></p>
                   </td>
                </tr>
             </table>

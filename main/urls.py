@@ -1,7 +1,9 @@
 from django.urls import path,  include
 from .views import *
 urlpatterns=[
-    path('admin_form',admin,name='admin_form'),
+    path('',admin,name='admin_form'),
+        path('admin_form',admin,name='admin_form'),
+
     path(r'pdf1/<slug>', pdf1_view,name='pdf1'), 
         path(r'pdf_2/<slug>',pdf2_view,name="pdf2"),
         path(r'pdf_3/<slug>',pdf3_view,name="pdf3"),

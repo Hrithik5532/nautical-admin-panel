@@ -105,6 +105,10 @@ const FormSchema = new Schema({
         type: String
     },
     //2) NEXT OF KINS/ DEPENDENTS
+    name_of_wife: {
+
+        type: String
+    },
     name_of_kin: {
 
         type: String
@@ -114,6 +118,10 @@ const FormSchema = new Schema({
         type: String
     },
     add_nkd: {
+
+        type: String
+    },
+    no_of_child: {
 
         type: String
     },
@@ -188,6 +196,10 @@ const FormSchema = new Schema({
         type: String
     },
     panama_certificate_no: {
+
+        type: String
+    },
+    panama_place_of_issue: {
 
         type: String
     },
@@ -640,8 +652,6 @@ const FormSchema = new Schema({
     refresher_issuing_authority: {
         type: String
     },
-
-
     ranso_cerificate_no: {
         type: String
     },
@@ -687,7 +697,6 @@ const FormSchema = new Schema({
     indos_issuing_authority: {
         type: String
     },
-
     simulator_cerificate_no: {
         type: String
     },
@@ -838,8 +847,6 @@ const FormSchema = new Schema({
     lvh_issuing_authority: {
         type: String
     },
-
-
     sim_course_cerificate_no: {
         type: String
     },
@@ -855,8 +862,6 @@ const FormSchema = new Schema({
     sim_course_issuing_authority: {
         type: String
     },
-
-
     tanker_cerificate_no: {
         type: String
     },
@@ -962,8 +967,6 @@ const FormSchema = new Schema({
     dce_chem_issuing_authority: {
         type: String
     },
-
-
     dce_gas_cerificate_no: {
         type: String
     },
@@ -979,7 +982,6 @@ const FormSchema = new Schema({
     dce_gas_issuing_authority: {
         type: String
     },
-
     lcb_cerificate_no: {
         type: String
     },
@@ -1040,10 +1042,6 @@ const FormSchema = new Schema({
     shm_issuing_authority: {
         type: String
     },
-
-
-
-
     //8)References
     reference_name_1: {
         type: String
@@ -1190,6 +1188,22 @@ const FormSchema = new Schema({
         type: String
     },
     declaration_date: {
+        type: String
+    },
+    twitter: {
+
+        type: String
+    },
+    linkedin: {
+
+        type: String
+    },
+    instagram: {
+
+        type: String
+    },
+    facebook: {
+
         type: String
     },
     date: {
