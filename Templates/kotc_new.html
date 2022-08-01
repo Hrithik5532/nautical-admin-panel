@@ -755,47 +755,29 @@
                   </p>
                </td>
             </tr>
+
+
+
+
+
             <tr style='height:11.35pt'>
                <td  style='border:solid windowtext 1.0pt;border-top:
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt;width:50%'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB</span></b></p>
-               </td>
-
-
-
-
-               
-               <td  style='border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>3. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text72></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
+                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DOB</span></b></p>
                </td>
             </tr>
-
+            {% for i in parse_data.kin_array  %}
             <tr style='height:11.35pt'>
 
                <td style='border:solid windowtext 1.0pt;border-top:
                   none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>1.  </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text70></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
-               </td>
-               <td width=331 style='border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>4. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text73></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
-               </td>
-            </tr>
+                  <p class=MsoNormal><b><b><span lang=EN-GB style='font-size:9.0pt'>{{forloop.counter}}.</span></b><span lang=EN-GB style='font-size:9.0pt'>{{i.name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.dob}}</span></b></p>
 
-            <tr style='height:11.35pt'>
-               <td style='border:solid windowtext 1.0pt;border-top:
-                  none;padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>2. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text71></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
                </td>
-               <td width=331 style='border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><b><span lang=EN-GB style='font-size:9.0pt'>5. </span></b><b><span lang=EN-GB style='font-size:9.0pt'><a name=Text74></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></p>
-               </td>
+              
             </tr>
+            {% endfor %}
+            
 
 
 
@@ -984,26 +966,148 @@
                </td>
 
 
-               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+               {% if parse_data.uk_grade %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'><a name=Text83></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_number}}</span></p>
                </td>
-               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'><a name=Text84></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>UK</span></p>
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'><a name=Text89></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_liscence_date_of_issue}}</span></p>
                </td>
                <td width=114 style='width:85.2pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'><a name=Text90></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_lisence_date_of_expiry}}</span></p>
                </td>
+               
+               {% elif parse_data.indian_number %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_number}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>INDIAN</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.aus_number %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_number}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>AUS</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.aus_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.singapore_number %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_number}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>SINGAPORE</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.singapore_lisence_date_of_expiry}}</span></p>
+               </td>
+
+
+               {% elif parse_data.panama_number %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_number}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>PANAMA</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.panama_lisence_date_of_expiry}}</span></p>
+               </td>
+
+               {% elif parse_data.others_number %}
+               
+               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
+               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_number}}</span></p>
+               </td>
+               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>OTHERS</span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_liscence_date_of_issue}}</span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_lisence_date_of_expiry}}</span></p>
+               </td>
+
+
+
+               {% endif %}
 
 
 
