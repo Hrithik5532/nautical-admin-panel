@@ -866,20 +866,22 @@
 		</tr>
 		<tr>
 			<td colspan="4" width="368" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1.50pt solid #000000; border-right: 1px solid #000000; padding: 0in 0.08in">
-				<ol start="22"><li><p class="western" align="left" style="orphans: 0; widows: 0">
+				<ol start="14"><li><p class="western" align="left" style="orphans: 0; widows: 0">
 					<font face="Arial, serif"><font size="2" style="font-size: 11pt">Valid
 					Passport</font></font></p>
 				</ol>
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if parse_data.passport_date_of_expiry %}
-                    <input type="checkbox" checked/></font></font></p>
-                    {% else %}
-                    <input type="checkbox" /></font></font></p>
+					  {% if parse_data.passport_no %}
+					<input type="checkbox" checked/></font></font></p>
 
-                    {% endif %}
-                </font></font></p>
+
+					{% else %}
+					<input type="checkbox" /></font></font></p>
+
+					{% endif %}
+				</font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.passport_date_of_expiry}}<span lang="en-US"></span></font></font></p>
@@ -887,23 +889,39 @@
 		</tr>
 		<tr>
 			<td colspan="4" width="368" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1.50pt solid #000000; border-right: 1px solid #000000; padding: 0in 0.08in">
-				<ol start="23"><li><p class="western" align="left" style="orphans: 0; widows: 0">
+				<ol start="15"><li><p class="western" align="left" style="orphans: 0; widows: 0">
 					<font face="Arial, serif"><font size="2" style="font-size: 11pt">Valid
 					Seaman’s Book</font></font></p>
 				</ol>
 			</td>
 			<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-                      {% if parse_data.indian_date_of_expiry %}
-                    <input type="checkbox" checked/></font></font></p>
-                    {% else %}
-                    <input type="checkbox" /></font></font></p>
+					  {% if parse_data.indian_date_of_expiry %}
+					<input type="checkbox" checked/></font></font></p>
 
-                    {% endif %}
-                </font></font></p>
+					{% elif parse_data.panama_date_of_expiry %}
+					<input type="checkbox" checked/></font></font></p>
+
+					{% elif parse_data.others_date_of_expiry %}
+					<input type="checkbox" checked/></font></font></p>
+
+					{% else %}
+					<input type="checkbox" /></font></font></p>
+
+					{% endif %}
+				</font></font></p>
 			</td>
 			<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-				<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.indian_date_of_expiry}}<span lang="en-US"></span></font></font></p>
+				<font face="Arial, serif"><font size="2" style="font-size: 11pt">
+					{% if parse_data.indian_date_of_expiry %}
+					{{parse_data.indian_date_of_expiry}}
+					{% elif parse_data.panama_date_of_expiry %}
+					{{parse_data.panama_date_of_expiry}}
+					{% elif parse_data.others_date_of_expiry %}
+					{{parse_data.others_date_of_expiry}}
+					{% endif %}
+		
+					<span lang="en-US"></span></font></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -1779,8 +1797,10 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if parse_data.pass_date_of_expiry %}
+							  {% if parse_data.passport_no %}
 							<input type="checkbox" checked/></font></font></p>
+
+
 							{% else %}
 							<input type="checkbox" /></font></font></p>
 		
@@ -1788,7 +1808,7 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.pass_date_of_expiry}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.passport_date_of_expiry}}<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
@@ -1800,8 +1820,15 @@
 					</td>
 					<td width="52" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="center" style="orphans: 0; widows: 0">
 						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
-							  {% if parse_data.ind_date_of_expiry %}
+							  {% if parse_data.indian_date_of_expiry %}
 							<input type="checkbox" checked/></font></font></p>
+
+							{% elif parse_data.panama_date_of_expiry %}
+							<input type="checkbox" checked/></font></font></p>
+
+							{% elif parse_data.others_date_of_expiry %}
+							<input type="checkbox" checked/></font></font></p>
+
 							{% else %}
 							<input type="checkbox" /></font></font></p>
 		
@@ -1809,7 +1836,16 @@
 						</font></font></p>
 					</td>
 					<td colspan="2" width="212" valign="top" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1.50pt solid #000000; padding: 0in 0.08in"><p lang="en-GB" class="western" align="left" style="orphans: 0; widows: 0">
-						<font face="Arial, serif"><font size="2" style="font-size: 11pt">{{parse_data.ind_date_of_expiry}}<span lang="en-US"></span></font></font></p>
+						<font face="Arial, serif"><font size="2" style="font-size: 11pt">
+							{% if parse_data.indian_date_of_expiry %}
+							{{parse_data.indian_date_of_expiry}}
+							{% elif parse_data.panama_date_of_expiry %}
+							{{parse_data.panama_date_of_expiry}}
+							{% elif parse_data.others_date_of_expiry %}
+							{{parse_data.others_date_of_expiry}}
+							{% endif %}
+				
+							<span lang="en-US"></span></font></font></p>
 					</td>
 				</tr>
 				<tr>
