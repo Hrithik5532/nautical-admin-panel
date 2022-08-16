@@ -62,8 +62,8 @@
 <!-- max-width:794px; max-height:1528px; -->
             <div>
             
-            <div class="title-heading row">
-                <div class="container col-10">
+            <div class="title-heading row" style="    justify-content: end;            ">
+                {% comment %} <div class="container col-10">
                     <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:9pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="../static/media/logos/warmseas.jpeg" class="imgg" alt="IMGAE"></span></p>
                 <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><strong><span >Warm Seas Development & Trading Co. LLC</span></strong></p>
                 <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>Office 701,The Golden Tower, Corniche Road, Buhayrah,  </span><strong></strong></p>
@@ -71,7 +71,7 @@
                 <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>  Tel No. +971 4654 6070 / Fax No. +971 4354 6002</span><strong></strong></p>
 
                 <!-- <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:12pt;"><strong><span style="font-family:'Monotype Corsiva';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:'Monotype Corsiva';">_______________________________________________________________________________________________</span></strong></p> -->
-                </div>
+                </div> {% endcomment %}
                 <div class="right col-1 d-flex justify-content-end">
                     <div class="photo">
                         <img src="{{parse_data.formal_photo}}"style="height:120px" alt="photo">
@@ -200,10 +200,10 @@
                     </tr>
                     <tr style="height:25px;">
                         <td colspan="3" style="width:260.7pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.4pt; padding-left:5.03pt; vertical-align:bottom;">
-                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">E-mail 1</span><span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Cambria;">:&nbsp;</span>{{parse_data.email_permanent|default_if_none:""}}</p>
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">E-mail 1</span><span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Cambria;">:&nbsp;</span>{{parse_data.email_present|default_if_none:""}}</p>
                         </td>
                         <td colspan="3" style="width:249.25pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom;">
-                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">E-mail 2</span><span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Cambria;">:&nbsp;</span><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.email_present|default_if_none:""}}</p>
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">E-mail 2</span><span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-family:Cambria;">:&nbsp;</span><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.email_permanent|default_if_none:""}}</p>
                         </td>
                     </tr>
                     <tr style="height:25px;">
@@ -457,15 +457,17 @@
             </table>
 
             <div class="title-heading row "style=" page-break-before: always; ">
-                    <div class="container col-10">
-                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:9pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="../static/media/logos/warmseas.jpeg" class="imgg" alt="IMGAE"></span></p>
-                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><strong><span >Warm Seas Development & Trading Co. LLC</span></strong></p>
-                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>Office 701,The Golden Tower, Corniche Road, Buhayrah,  </span><strong></strong></p>
-                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span> PO Box 24327, Sharjah, United Arab Emirates </span><strong></strong></p>
-                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>  Tel No. +971 4654 6070 / Fax No. +971 4354 6002</span><strong></strong></p>
-    
-                    <!-- <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:12pt;"><strong><span style="font-family:'Monotype Corsiva';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:'Monotype Corsiva';">_______________________________________________________________________________________________</span></strong></p> -->
-                    </div>
+                 {% comment %}
+	   <div class="container col-10">
+	                        <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:9pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="../static/media/logos/warmseas.jpeg" class="imgg" alt="IMGAE"></span></p>
+	                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><strong><span >Warm Seas Development & Trading Co. LLC</span></strong></p>
+	                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>Office 701,The Golden Tower, Corniche Road, Buhayrah,  </span><strong></strong></p>
+	                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span> PO Box 24327, Sharjah, United Arab Emirates </span><strong></strong></p>
+	                    <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>  Tel No. +971 4654 6070 / Fax No. +971 4354 6002</span><strong></strong></p>
+	    
+	                    <!-- <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:12pt;"><strong><span style="font-family:'Monotype Corsiva';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:'Monotype Corsiva';">_______________________________________________________________________________________________</span></strong></p> -->
+	                    </div>
+{% endcomment %}
                  
                 </div>
 
@@ -1635,7 +1637,7 @@
             
         
             <div class="title-heading row "style=" page-break-before: always; ">
-            <div class="container col-10">
+            {% comment %} <div class="container col-10">
                 <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:9pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="../static/media/logos/warmseas.jpeg" class="imgg" alt="IMGAE"></span></p>
             <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><strong><span >Warm Seas Development & Trading Co. LLC</span></strong></p>
             <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>Office 701,The Golden Tower, Corniche Road, Buhayrah,  </span><strong></strong></p>
@@ -1643,7 +1645,7 @@
             <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>  Tel No. +971 4654 6070 / Fax No. +971 4354 6002</span><strong></strong></p>
 
             <!-- <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:12pt;"><strong><span style="font-family:'Monotype Corsiva';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:'Monotype Corsiva';">_______________________________________________________________________________________________</span></strong></p> -->
-            </div>
+            </div> {% endcomment %}
          
         </div>
             <p style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
@@ -1867,14 +1869,14 @@
 
         
         <div class="title-heading row "style=" page-break-before: always; ">
-            <div class="container col-10">
+            {% comment %} <div class="container col-10">
                 <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:9pt;"><span style="height:0pt; display:block; position:absolute; z-index:0;"><img src="../static/media/logos/warmseas.jpeg" class="imgg" alt="IMGAE"></span></p>
                 <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><strong><span >Warm Seas Development & Trading Co. LLC</span></strong></p>
                     <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>Office 701,The Golden Tower, Corniche Road, Buhayrah,  </span><strong></strong></p>
                     <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span> PO Box 24327, Sharjah, United Arab Emirates </span><strong></strong></p>
                     <p  style="margin-top:0pt; margin-bottom:0pt;  font-size:15px;padding-left:28.5%;"><span>  Tel No. +971 4654 6070 / Fax No. +971 4354 6002</span><strong></strong></p>
 
-            </div>
+            </div> {% endcomment %}
         
         </div>
         <p  style="margin-top:0pt; margin-bottom:0pt; line-height:normal; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
