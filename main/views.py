@@ -12,19 +12,23 @@ import urllib
 
 # Partition Of Form:
 def pdf1_view(request,slug):
-    res = requests.get(f"https://marine-form-backend.herokuapp.com/admin/form/{slug}")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print(slug)
+    res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
-
+    print(data)
     parse_json=json.loads(data)
-
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print(parse_json)
 
     return render(request,'amptc.html',{'parse_data':parse_json})
 
 def pdf1_apmtc2_view(request,slug):
-    res = requests.get(f"https://marine-form-backend.herokuapp.com/admin/form/{slug}")
+    res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
 
-    parse_json=json.loads(data)
+    parse_json=json.dumps(data)
+    print(parse_json)
 
 
     return render(request,'amptc2.html',{'parse_data':parse_json})
@@ -32,15 +36,15 @@ def pdf1_apmtc2_view(request,slug):
 
 
 def pdf2_view(request,slug):
-    res = requests.get(f"https://marine-form-backend.herokuapp.com/admin/form/{slug}")
+    res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
-
+    print(data)
     parse_json=json.loads(data)
 
     return render(request,"kotc_new.html",{'parse_data':parse_json})
 
 def pdf3_view(request,slug):
-    res = requests.get(f"https://marine-form-backend.herokuapp.com/admin/form/{slug}")
+    res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
 
     parse_json=json.loads(data)
@@ -48,7 +52,7 @@ def pdf3_view(request,slug):
     return render(request,"warmseas.html",{'parse_data':parse_json})
 
 def pdf4_view(request,slug):
-    res = requests.get(f"https://marine-form-backend.herokuapp.com/admin/form/{slug}")
+    res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
 
     parse_json=json.loads(data)
@@ -58,13 +62,14 @@ def pdf4_view(request,slug):
 
 def admin(request):
    
-    url ='https://marine-form-backend.herokuapp.com/admin/forms'
+    url ='http://206.189.143.226:5000/admin/forms'
  
     try:
         s = requests.session()
         s.keep_alive = False
         r = requests.get(url, verify=False, timeout=5)
         data = (r.text)
+        print(data)
         parse_json=json.loads(data)
         
         ids =[]
@@ -82,6 +87,9 @@ def admin(request):
 
 
 def Delete_details(request,slug):
-    res = requests.delete(f'https://marine-form-backend.herokuapp.com/admin/form/delete/{slug}')
+    res = requests.delete(f'http://206.189.143.226:5000/admin/forms/delete/{slug}')
     return HttpResponseRedirect(reverse('admin_form'))
 
+
+def sub_profile(request):
+    pass

@@ -10,7 +10,7 @@ urlpatterns=[
         path(r'pdf_4/<slug>',pdf4_view,name='pdf4'),
        
         path('Amptc_form_2/<slug:slug>',pdf1_apmtc2_view,name="amptc2")
-        ,path('delete/<slug>',Delete_details,name='delete')
+        ,path('delete/<slug>',Delete_details,name='delete'),
 
 
 ]
