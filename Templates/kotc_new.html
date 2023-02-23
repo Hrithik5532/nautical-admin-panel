@@ -870,6 +870,7 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.passport_date_of_expiry}}</span></p>
                </td>
+               
             </tr>
             <tr style='height:11.35pt'>
                <td width=127 style='width:95.05pt;border:solid windowtext 1.0pt;border-top:
@@ -946,6 +947,27 @@
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_date_of_expiry}}</span></p>
                </td>
+               {% else %}
+               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
                {% endif %}
 
 
@@ -976,7 +998,7 @@
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>UK</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>INIDAN</span></p>
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -989,28 +1011,7 @@
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_lisence_date_of_expiry}}</span></p>
                </td>
                
-               {% elif parse_data.indian_number %}
-               
-               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
-               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_number}}</span></p>
-               </td>
-               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>INDIAN</span></p>
-               </td>
-               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_liscence_date_of_issue}}</span></p>
-               </td>
-               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_lisence_date_of_expiry}}</span></p>
-               </td>
+             
 
                {% elif parse_data.aus_number %}
                
@@ -1022,7 +1023,7 @@
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>AUS</span></p>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>U.K.</span></p>
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1105,7 +1106,27 @@
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_lisence_date_of_expiry}}</span></p>
                </td>
 
-
+               {% else %}
+               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
 
                {% endif %}
 
@@ -1170,7 +1191,7 @@
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>U.K
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>INDIAN
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1183,28 +1204,7 @@
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.uk_lisence_date_of_expiry}}</span></p>
                </td>
                
-               {% elif parse_data.indian_grade %}
                
-               <td width=164 style='width:123.0pt;border-top:none;border-left:none;
-               border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_grade}}</span></p>
-               </td>
-               <td width=153 style='width:114.7pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>INDIAN
-               </td>
-               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_liscence_date_of_issue}}</span></p>
-               </td>
-               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
-                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.indian_lisence_date_of_expiry}}</span></p>
-               </td>
 
                {% elif parse_data.aus_grade %}
                
@@ -1216,7 +1216,7 @@
                <td width=153 style='width:114.7pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
                   padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
-                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>AUS
+                  <p class=MsoHeader><span lang=EN-GB style='font-size:9.0pt'></span></p>U.K.
                </td>
                <td width=109 style='width:81.9pt;border-top:none;border-left:none;
                   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1299,7 +1299,27 @@
                   <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'>{{parse_data.others_lisence_date_of_expiry}}</span></p>
                </td>
 
-
+               {% else %}
+               <td width=164 style='width:122.95pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=153 style='width:114.8pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=109 style='width:81.9pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
+               <td width=114 style='width:85.2pt;border-top:none;border-left:none;
+                  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+                  padding:0in 5.4pt 0in 5.4pt;height:11.35pt'>
+                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt'></span></p>
+               </td>
 
                {% endif %}
 
@@ -1686,18 +1706,16 @@
                      Skills </span></b>
                   </p>
                </td>
-               <td width=205 colspan=2 valign=top style='width:154.0pt;border:none;
-               padding:0in 5.4pt 0in 5.4pt;height:50.75pt'>
-                  <p class=MsoNormal><span
-                     lang=EN-GB style='font-size:9.0pt;background:'><a name=Check25></a></span><span
-                     lang=EN-GB style='font-size:9.0pt;background:'>     </span></p>
-                  <p class=MsoNormal><span
-                     lang=EN-GB style='font-size:9.0pt;background:'><a name=Check26></a></span><span
-                     lang=EN-GB style='font-size:9.0pt;background:'>  </span>{{parse_data.additional_skills}}</p>
-                  <p class=MsoNormal><span lang=EN-GB style='font-size:9.0pt;background:'> </span></p>
-                  <p class=MsoNormal><span
-                     lang=EN-GB style='font-size:9.0pt;background:'> </span><span lang=EN-GB style='font-size:9.0pt;background:'><a name=Text372></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-               </td>
+               <td  colspan=5 valign=top style='width:100%;border:none;display: flex;padding:0in 5.4pt 0in 5.4pt;height:50.75pt'>
+                  {% for i in skills %}
+                  
+                  <p class=MsoNormal style="width:100%" ><input type="checkbox" checked>   <span
+                     lang=EN-GB style='font-size:9.0pt;background:'>  </span>{{i}}</p>
+                     {% endfor %}
+                  </td>
+                  
+
+
                <td width=192 valign=top style='width:143.95pt;border:none;border-bottom:
                   solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt;height:50.75pt'>
                   <p class=MsoNormal><span
@@ -2510,7 +2528,7 @@
          </p>
          <p class=MsoNormal><b><span lang=EN-GB style='font-size:8.0pt'>                                                                                                                                                                      </span></b></p>
          <p class=MsoNormal><b><span lang=EN-GB style='font-size:10.0pt'>Applicant’s
-            Signature: <img src="{{parse_data.signature_photo}}" alt="signature" style="width:160px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date: {{parse_data.declaration_date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           Agency Signature: </span></b>
+            Signature: <img src="{{parse_data.signature_photo}}" alt="signature" style="width:160px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Date: {{parse_data.date_of_application}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           Agency Signature: </span></b>
          </p>
          <p class=MsoBlockText><span style='font-size:5.0pt'>&nbsp;</span></p>
          <p class=MsoBlockText>Send to:<a name=Text397></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  Copy

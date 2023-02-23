@@ -300,7 +300,6 @@
                     </tr>
                 </tbody>
             </table>
-            <p  style=" line-height:normal; font-size:8pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
             <p  style=" line-height:normal;"><strong><span style="font-family:Cambria;">2. NEXT OF KIN / DEPENDENTS</span></strong></p>
             <table class="w-100" cellpadding="0" cellspacing="0" style=" border:0.75pt solid #000000; border-collapse:collapse;">
                 <tbody>
@@ -339,8 +338,8 @@
                     
                     
 
-
-                  {% for i in parse_data.kin_array %}
+                    {% if  parse_data.kin_array %}
+                    {% for i in parse_data.kin_array %}
                     <tr style="height:14.4pt;     border: 1px solid;">
                         <td style="width:204.05pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom;">
                             <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.name|default_if_none:""}}</p>
@@ -356,6 +355,23 @@
                         </td>
                     </tr>
                     {% endfor %} 
+                    {% else %}
+                    <tr style="height:14.4pt;     border: 1px solid;">
+                        <td style="width:204.05pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
+                        </td>
+                        <td style="width:88.4pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:9pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
+                        </td>
+                        <td style="width:60.1pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:9pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
+                        </td>
+                        <td style="width:140.5pt; padding-right:5.03pt; padding-left:5.4pt; vertical-align:bottom;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:9pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
+                        </td>
+                    </tr>
+                    {% endif %}
+                    
                 </tbody>
             </table>
             <p style=" line-height:normal;"><strong><span style="font-family:Cambria;">3. PASSPORT DETAILS</span></strong></p>
@@ -431,7 +447,6 @@
                     </tr>
                 </tbody>
             </table>
-            <p style=" line-height:normal; font-size:8pt;"><strong><span style="font-family:Cambria;">&nbsp;</span></strong></p>
             <p style="line-height:normal;"><strong><span style="font-family:Cambria;">4. CONTINUOUS DISCHARGE CERTIFICATE / SEAMEN BOOK</span></strong></p>
             <table cellpadding="0" cellspacing="0" style="width:100%; border:0.75pt solid #000000; border-collapse:collapse;">
                 <tbody>
@@ -529,7 +544,7 @@
                         </td>
                     </tr>
              
-                    <tr style="height:14.2pt;">
+                    <tr style="height:14.2pt;border-top:1px solid">
                         <td style="width:98.6pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:bottom;">
                             <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">ELEMENTATY</span></p>
                         </td>
@@ -648,43 +663,6 @@
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">INDIAN</span></p>
                         </td>
                         <td style="width:57.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_grade|default_if_none:""}}</p>
-                        </td>
-                        <td style="width:55.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_number|default_if_none:""}}</p>
-                        </td>
-                        <td style="width:48.6pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_liscence_date_of_issue}}</p>
-                        </td>
-                        <td style="width:60.05pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_lisence_date_of_expiry}}</p>
-                        </td>
-                        <td style="width:67.2pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indain_lisence_date_revalidation}}</p>
-                        </td>
-                        <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.ind_stcw == 'Yes' %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_stcw|default_if_none:""}}</p>
-                            {% else %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
-
-                            {% endif %}
-                        </td>
-                        <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.ind_stcw == 'No' %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.indian_stcw|default_if_none:""}}</p>
-                            {% else %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
-
-                            {% endif %}
-                        </td>
-                    </tr>
-
-                    <tr style="height:16.4pt;">
-                        <td style="width:93pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">UK</span></p>
-                        </td>
-                        <td style="width:57.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.uk_grade|default_if_none:""}}</p>
                         </td>
                         <td style="width:55.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
@@ -708,7 +686,7 @@
                             {% endif %}
                         </td>
                         <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.uk_stcw == 'No' %}
+                            {% if parse_data.uk_singa_stcw == 'No' %}
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.uk_stcw|default_if_none:""}}</p>
                             {% else %}
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
@@ -716,9 +694,10 @@
                             {% endif %}
                         </td>
                     </tr>
-                    <tr style="height:14.4pt;">
+
+                    <tr style="height:16.4pt;">
                         <td style="width:93pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">AUS</span></p>
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">UK</span></p>
                         </td>
                         <td style="width:57.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.aus_grade|default_if_none:""}}</p>
@@ -744,7 +723,7 @@
                             {% endif %}
                         </td>
                         <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.aus_singa_stcw == 'No' %}
+                            {% if parse_data.aus_stcw == 'No' %}
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.aus_stcw|default_if_none:""}}</p>
                             {% else %}
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
@@ -752,7 +731,7 @@
                             {% endif %}
                         </td>
                     </tr>
-
+                 
                     <tr style="height:14.4pt;">
                         <td style="width:93pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">SINGAPORE</span></p>
@@ -789,42 +768,7 @@
                             {% endif %}
                         </td>
                     </tr>
-                    <tr style="height:14.4pt;">
-                        <td style="width:93pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">PANAMA</span></p>
-                        </td>
-                        <td style="width:57.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_grade|default_if_none:""}}</p>
-                        </td>
-                        <td style="width:55.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_number|default_if_none:""}}</p>
-                        </td>
-                        <td style="width:48.6pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_liscence_date_of_issue}}</p>
-                        </td>
-                        <td style="width:60.05pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_lisence_date_of_expiry}}</p>
-                        </td>
-                        <td style="width:67.2pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_lisence_date_revalidation}}</p>
-                        </td>
-                        <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.panama_stcw == 'Yes' %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_stcw|default_if_none:""}}</p>
-                            {% else %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
-
-                            {% endif %}
-                        </td>
-                        <td style="width:38.8pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
-                            {% if parse_data.panama_stcw == 'No' %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.panama_stcw|default_if_none:""}}</p>
-                            {% else %}
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
-
-                            {% endif %}
-                        </td>
-                    </tr>
+                  
                     <tr style="height:14.4pt;">
                         <td style="width:93pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:10pt;"><span style="font-family:Cambria;">OTHERS</span></p>
@@ -1715,7 +1659,7 @@
                 </tbody>
             </table>
             <p style=" margin-bottom:0pt; line-height:normal; font-size:12pt;"><span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-            <p style="  line-height:normal; font-size:12pt;"><strong><span style="font-family:Cambria; font-size:11pt;">9. HOW DID YOU COME TO KNOW ABOUT US?</span></strong><span style="width:24.31pt; display:inline-block;">&nbsp;</span><strong><span style="font-family:Cambria; font-size:11pt;">(Please tick the appropriate medium)</span></strong><strong><span style="font-family:Cambria; font-size:11pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:Cambria;">&radic;</span></strong></p>
+            <p style="  line-height:normal; font-size:12pt;"><strong><span style="font-family:Cambria; font-size:11pt;">9. HOW DID YOU COME TO KNOW ABOUT US?</span></strong><span style="width:24.31pt; display:inline-block;">&nbsp;</span><strong><span style="font-family:Cambria; font-size:11pt;">(Please write Yes or No in the appropriate medium)</span></strong><strong><span style="font-family:Cambria; font-size:11pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong><strong><span style="font-family:Cambria;"></span></strong></p>
             <table cellpadding="0" cellspacing="0" style="width:100%; border:0.75pt solid #000000; border-collapse:collapse;">
                 <tbody>
                     <tr style="height:15pt;">
@@ -2090,41 +2034,30 @@
             <p style="page-break-before:always; line-height:normal; font-size:10pt;"><strong><span style="font-family:Cambria;">&nbsp;</span></strong></p>
             <p style="margin:0pt 2%; line-height:normal; font-size:19px;"><strong><span style="font-family:Cambria;">14. SEA EXPERIENCE: (Most recent ar Top)</span></strong></p>
             <p style="margin:0pt 2%; line-height:normal; font-size:19px;"><strong><span style="font-family:Cambria;">Special Experience:</span></strong></p>
-            <table cellpadding="0" cellspacing="0" style="width:100%;   
-  border:0.75pt solid #000000; border-collapse:collapse; float:left;">
+            <table cellpadding="0" cellspacing="0" style="width:100%;   border:0.75pt solid #000000; border-collapse:collapse; float:left;">
                 <thead>
-                    <tr style="                    border-width: 1px ;
-                    ">
+                    <tr style="border-width: 1px ">
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin:0pt 16%;  text-align:center; font-size:11pt;"><strong><span style="font-family:Cambria;">Employer</span></strong></p>
                         </td>
                     
-                    
-
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin:0pt 16%;  text-align:center; font-size:11pt;"><strong><span style="font-family:Cambria;">RPSL Agent</span></strong></p>
                         </td>
-                    
-                    
+          
 
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin:0pt 16%;  text-align:center; font-size:11pt;"><strong><span style="font-family:Cambria;">Vessel NAME &amp; Type</span></strong></p>
                         </td>
-                     
-                    
-                    
-
+     
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin:0pt 16%;  font-size:11pt;"><strong><span style="font-family:Cambria;">Steam /Motor</span></strong></p>
                         </td>
-                    
-                    
-
+         
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin:0pt 16%;  text-align:center; font-size:11pt;"><strong><span style="font-family:Cambria;">DWT/GRT</span></strong></p>
                         </td>
-                    
-                    
+  
 
                         <td style="width: 1%;border-width: 1px ;">
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><strong><span style="font-family:Cambria;">RANK</span></strong></p>
@@ -2168,7 +2101,7 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                    {% if  parse_data.special_experience %}
                     {% for i in parse_data.special_experience %}
                     <tr style="height:14.55pt;">
                      
@@ -2215,6 +2148,97 @@
 
                     </tr>
                     {% endfor %}
+                    
+                    {% else %}
+                    <tr style="height:14.55pt;">
+                     
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                      
+
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                    </tr>
+                    
+                    <tr style="height:14.55pt;">
+                     
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                      
+
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+                        <td style="width: 1%;border-width: 1px ;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; text-align:center; font-size:11pt;"><span style="font-family:Cambria;"></span></p>
+                        </td>
+
+                    </tr>{% endif %} 
 
                 </tbody>
             </table><br> <hr>
@@ -2274,6 +2298,8 @@
                             <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:Cambria;">Any other useful information</span></strong></p>
                         </td>
                     </tr>
+
+                    {% if parse_data.on_shore %}
                     {% for i in parse_data.on_shore %}
                     <tr style="height:15.2pt;">
                         <td style="width:24.4pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
@@ -2304,9 +2330,68 @@
                             <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.any_useful_info|default_if_none:""}}</p>
                         </td>
                     </tr>
-                    
-                    
+                
                     {% endfor %}
+                    {% else %}
+                    <tr style="height:15.2pt;">
+                        <td style="width:24.4pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{forloop.counter|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:74.25pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Employer|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:45.9pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Title|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:63.75pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Workshop|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:84.75pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.major_machines|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:95.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.personel_supervised|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:88.45pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.size_tonnage|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:67.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.from|default_if_none:""}} {{i.to |default_if_none:""}}</p>
+                        </td>
+                        <td style="width:128.05pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.any_useful_info|default_if_none:""}}</p>
+                        </td>
+                    </tr>
+                    <tr style="height:15.2pt;">
+                        <td style="width:24.4pt; border-top-style:solid; border-top-width:0.75pt; border-right-style:solid; border-right-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{forloop.counter|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:74.25pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Employer|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:45.9pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Title|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:63.75pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.Workshop|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:84.75pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.major_machines|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:95.5pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.personel_supervised|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:88.45pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.size_tonnage|default_if_none:""}}</p>
+                        </td>
+                        <td style="width:67.15pt; border-style:solid; border-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.from|default_if_none:""}} {{i.to |default_if_none:""}}</p>
+                        </td>
+                        <td style="width:128.05pt; border-top-style:solid; border-top-width:0.75pt; border-left-style:solid; border-left-width:0.75pt; border-bottom-style:solid; border-bottom-width:0.75pt; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top;">
+                            <p style="margin-top:0pt; margin-bottom:0pt; font-size:10pt;"><span style="font-family:Cambria;">&nbsp;</span>{{i.any_useful_info|default_if_none:""}}</p>
+                        </td>
+                    </tr>
+                    {% endif %}
 
                     
                     
@@ -2324,7 +2409,7 @@
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;"><span style="font-family:Cambria;">&nbsp;</span></p>
                             <p style="margin-top:0pt; margin-bottom:0pt; text-align:justify;"><span style="font-family:Cambria;">&nbsp;</span></p>
                             <p style="margin-top:0pt; margin-bottom:0pt;"><span style="font-family:Cambria;">&nbsp;</span></p>
-                            <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:Cambria;">Date :</span></strong><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.declaration_date |default_if_none:""}}<span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span style="font-family:Cambria;">SIGNATURE OF APPLICANT</span></strong><span style="font-family:Cambria;">&nbsp;:       </span>
+                            <p style="margin-top:0pt; margin-bottom:0pt;"><strong><span style="font-family:Cambria;">Date :</span></strong><span style="font-family:Cambria;">&nbsp;</span>{{parse_data.date_of_application |default_if_none:""}}<span style="font-family:Cambria;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong><span style="font-family:Cambria;">SIGNATURE OF APPLICANT</span></strong><span style="font-family:Cambria;">&nbsp;:       </span>
                                         <img src="{{parse_data.signature_photo}}"style="height:120px" alt="SIGNATURE">
                                                           </p>
                                                           <p style="margin-top:0pt; margin-bottom:8pt;">&nbsp;</p>

@@ -12,14 +12,10 @@ import urllib
 
 # Partition Of Form:
 def pdf1_view(request,slug):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    print(slug)
     res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
-    print(data)
     parse_json=json.loads(data)
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    print(parse_json)
+   
 
     return render(request,'amptc.html',{'parse_data':parse_json})
 
@@ -27,8 +23,7 @@ def pdf1_apmtc2_view(request,slug):
     res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
 
-    parse_json=json.dumps(data)
-    print(parse_json)
+    parse_json=json.loads(data)
 
 
     return render(request,'amptc2.html',{'parse_data':parse_json})
@@ -38,11 +33,15 @@ def pdf1_apmtc2_view(request,slug):
 def pdf2_view(request,slug):
     res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
-    print(data)
     parse_json=json.loads(data)
+    try:
+        add_skills = parse_json['additional_skills']
+        print(add_skills.split(','))
 
-    return render(request,"kotc_new.html",{'parse_data':parse_json})
-
+        return render(request,"kotc_new.html",{'parse_data':parse_json,'skills':add_skills.split(',')})
+    except:
+        return render(request,"kotc_new.html",{'parse_data':parse_json})
+        
 def pdf3_view(request,slug):
     res = requests.get(f"http://206.189.143.226:5000/admin/form/{slug}")
     data = res.text
@@ -56,7 +55,6 @@ def pdf4_view(request,slug):
     data = res.text
 
     parse_json=json.loads(data)
-
     return render(request,"new.html",{'parse_data':parse_json})
 
 
@@ -69,7 +67,6 @@ def admin(request):
         s.keep_alive = False
         r = requests.get(url, verify=False, timeout=5)
         data = (r.text)
-        print(data)
         parse_json=json.loads(data)
         
         ids =[]
